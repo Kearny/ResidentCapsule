@@ -30,7 +30,6 @@ namespace Com.Kearny.Shooter.GameMechanics
             }
         }
 
-        [ContextMenu("Self Destruct")]
         private void Die()
         {
             isDead = true;

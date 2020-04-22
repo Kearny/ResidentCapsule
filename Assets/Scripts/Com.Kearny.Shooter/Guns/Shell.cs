@@ -31,8 +31,8 @@ namespace Com.Kearny.Shooter.Guns
 
             float percent = 0;
             const float fadeSpeed = 1 / FadeTime;
-            Material material = _renderer.material;
-            Color initialColor = material.color;
+            var material = _renderer.material;
+            var initialColor = material.color;
 
             while (percent < 1)
             {

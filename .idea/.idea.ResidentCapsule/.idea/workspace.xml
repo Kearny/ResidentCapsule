@@ -29,14 +29,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Pistol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/MuzzleFlash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/FireMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/MapController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/MuzzleFlash.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/MapController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Pistol.cs" />
       </list>
     </option>
   </component>
@@ -77,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587585363425</updated>
-      <workItem from="1587585373141" duration="2930000" />
+      <workItem from="1587585373141" duration="3667000" />
     </task>
     <servers />
   </component>

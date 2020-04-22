@@ -16,7 +16,7 @@ namespace Com.Kearny.Shooter.GameMechanics
         
         public Transform GetRandomOpenSpawner()
         {
-            GameObject openSpawner = _shuffledSpawners.First();
+            var openSpawner = _shuffledSpawners.First();
 
             if (_shuffledSpawners.Count <= 1) return openSpawner.transform;
             
@@ -27,12 +27,12 @@ namespace Com.Kearny.Shooter.GameMechanics
             return openSpawner.transform;
         }
 
-        private static LinkedList<GameObject> Shuffle(GameObject[] gameObjects)
+        private static LinkedList<GameObject> Shuffle(IList<GameObject> gameObjects)
         {
-            for (var i = 0; i < gameObjects.Length; i++)
+            for (var i = 0; i < gameObjects.Count; i++)
             {
                 var tmp = gameObjects[i];
-                var range = Random.Range(i, gameObjects.Length);
+                var range = Random.Range(i, gameObjects.Count);
                 gameObjects[i] = gameObjects[range];
                 gameObjects[range] = tmp;
             }

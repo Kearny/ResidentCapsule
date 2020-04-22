@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Com.Kearny.Shooter.GameMechanics
 {
+    [RequireComponent(typeof(Enemy.Enemy))]
     public class Spawner : MonoBehaviour
     {
         public Wave[] waves;
@@ -27,7 +28,6 @@ namespace Com.Kearny.Shooter.GameMechanics
 
         private void Update()
         {
-            if (enemy == null) return;
             if (_enemiesRemainingToSpawn <= 0 || !(Time.time > _nextSpawnTime)) return;
 
             _enemiesRemainingToSpawn--;
@@ -40,7 +40,7 @@ namespace Com.Kearny.Shooter.GameMechanics
         {
             const float spawnDelayBeforeFirstSpawn = 1;
 
-            Transform randomSpawner = _mapController.GetRandomOpenSpawner();
+            var randomSpawner = _mapController.GetRandomOpenSpawner();
 
             float spawnTimer = 0;
             while (spawnTimer < spawnDelayBeforeFirstSpawn)
