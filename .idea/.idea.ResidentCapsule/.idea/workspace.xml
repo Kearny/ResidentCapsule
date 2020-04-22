@@ -77,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587585363425</updated>
-      <workItem from="1587585373141" duration="1962000" />
+      <workItem from="1587585373141" duration="2930000" />
     </task>
     <servers />
   </component>
@@ -166,5 +166,24 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587586253992" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs</url>
+          <line>54</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" initialLine="54">
+            <startOffsets>
+              <option value="1443" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1471" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

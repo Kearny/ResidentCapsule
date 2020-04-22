@@ -9,7 +9,6 @@ namespace Com.Kearny.Shooter.GameMechanics
     {
         public Image fadePlane;
         public GameObject gameOverUi;
-        public Button playAgainButton;
 
         private Camera _mainCamera;
 
@@ -22,8 +21,6 @@ namespace Com.Kearny.Shooter.GameMechanics
             Cursor.visible = false;
             
             FindObjectOfType<Player.Player>().OnDeath += OnGameOver;
-
-            playAgainButton.onClick.AddListener(StartNewGame);
         }
 
         private void OnGameOver()
@@ -53,9 +50,8 @@ namespace Com.Kearny.Shooter.GameMechanics
         }
 
         // UI Input
-        private void StartNewGame()
+        public void StartNewGame()
         {
-            Debug.Log("StartNewGame");
             _mainCamera.enabled = false;
             
             Cursor.lockState = CursorLockMode.Locked;

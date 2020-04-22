@@ -290,12 +290,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8876362463002510883, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463002510883, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463002510883, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463453021432, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8876362463453021432, guid: deb3acbdc13c645cc92cc883266ac2ba,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8876362464588056010, guid: deb3acbdc13c645cc92cc883266ac2ba,
-        type: 3}
+      objectReference: {fileID: 2121827244}
     - target: {fileID: 8876362463453021432, guid: deb3acbdc13c645cc92cc883266ac2ba,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -304,7 +323,32 @@ PrefabInstance:
     - target: {fileID: 8876362463453021432, guid: deb3acbdc13c645cc92cc883266ac2ba,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463453021432, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463453021432, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463453021439, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463453021439, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876362463453021439, guid: deb3acbdc13c645cc92cc883266ac2ba,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8876362464588056009, guid: deb3acbdc13c645cc92cc883266ac2ba,
         type: 3}
@@ -1166,3 +1210,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5536493cfafc4ca5b4b2772c0cae48b, type: 3}
+--- !u!114 &2121827244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8876362464588056010, guid: deb3acbdc13c645cc92cc883266ac2ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 494456118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855b586cd722c477c9ca145d84848a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
