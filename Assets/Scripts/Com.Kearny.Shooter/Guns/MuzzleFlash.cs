@@ -9,7 +9,7 @@ namespace Com.Kearny.Shooter.Guns
         public float flashTime;
         private void Start()
         {
-            Deactivate();
+            // Deactivate();
         }
 
         public void Activate()
