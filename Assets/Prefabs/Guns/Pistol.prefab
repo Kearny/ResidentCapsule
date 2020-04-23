@@ -113,8 +113,8 @@ MonoBehaviour:
   muzzle: {fileID: 6638636198293400217}
   projectile: {fileID: 4266817499533407773, guid: d5536493cfafc4ca5b4b2772c0cae48b,
     type: 3}
-  msBetweenShots: 100
-  muzzleVelocity: 60
+  msBetweenShots: 150
+  muzzleVelocity: 100
   shell: {fileID: 4302235874681298607, guid: 8db21555616a545869688eeab4518395, type: 3}
   shellEjection: {fileID: 5859844235951636808}
 --- !u!114 &7751018533616864465
