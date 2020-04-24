@@ -48,7 +48,7 @@ namespace Com.Kearny.Shooter.Player
             SetY();
             
             // Sprinting
-            _controller.IsRunning = Input.GetKey(KeyCode.LeftShift);
+            _controller.IsRunning = Input.GetKey(KeyCode.LeftShift) && !(verticalInput < 0f) ;
             if (_controller.IsRunning)
             {
                 mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, _baseFov * _sprintFovModfier, Time.deltaTime * 5f);

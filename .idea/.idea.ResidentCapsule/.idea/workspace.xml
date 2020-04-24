@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="" />
+    <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,9 +54,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/MapController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Pistol.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" />
       </list>
     </option>
   </component>
