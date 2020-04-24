@@ -104,7 +104,6 @@ namespace Com.Kearny.Shooter.Enemy
             const float attackSpeed = 3;
             float percent = 0;
 
-            _skinMaterial.color = Color.red;
             var hasAppliedDamage = false;
 
             while (percent <= 1)
@@ -121,8 +120,6 @@ namespace Com.Kearny.Shooter.Enemy
 
                 yield return null;
             }
-
-            _skinMaterial.color = _originalColor;
 
             _currentState = State.Chasing;
         }

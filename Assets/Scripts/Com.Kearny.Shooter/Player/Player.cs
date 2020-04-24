@@ -19,6 +19,9 @@ namespace Com.Kearny.Shooter.Player
 
         private readonly Quaternion _camCenter = new Quaternion(0, 0, 0, 1);
 
+        private float _baseFov;
+        private float _sprintFovModfier = 1.15f;
+
         // Start is called before the first frame update
         protected override void Start()
         {
@@ -26,6 +29,7 @@ namespace Com.Kearny.Shooter.Player
             
             _mainCameraTransform = mainCamera.transform;
             _controller = GetComponent<PlayerController>();
+            _baseFov = mainCamera.fieldOfView;
         }
 
         // Update is called once per frame
@@ -42,6 +46,17 @@ namespace Com.Kearny.Shooter.Player
 
             SetX();
             SetY();
+            
+            // Sprinting
+            _controller.IsRunning = Input.GetKey(KeyCode.LeftShift);
+            if (_controller.IsRunning)
+            {
+                mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, _baseFov * _sprintFovModfier, Time.deltaTime * 5f);
+            }
+            else
+            {
+                mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, _baseFov, Time.deltaTime * 5f);
+            }
         }
 
         private void SetY()

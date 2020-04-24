@@ -5,6 +5,9 @@ namespace Com.Kearny.Shooter.Player
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour
     {
+        public bool IsRunning 
+        { get; set; }
+        
         private Vector3 _velocity;
         private CharacterController _characterController;
 
@@ -16,6 +19,11 @@ namespace Com.Kearny.Shooter.Player
 
         public void Move(Vector3 moveVelocity)
         {
+            if (IsRunning)
+            {
+                moveVelocity *= 2;
+            }
+            
             _velocity = _characterController.isGrounded ? moveVelocity : Vector3.zero;
         }
 
