@@ -20,8 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Scene/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Scene/LightingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Gray_snaps002.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Gray_snaps002.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/Scripts/Editor/PackageChecker/PackageChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/Scripts/Editor/PackageChecker/PackageChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/Shell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/Shell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +61,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/MapController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/65/d69c0c20/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@7.3.1/Editor/Lighting/Reflection/HDBakedReflectionSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/FireMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Gun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C074160-DD1A-4D91-9B45-B6E4C27A3BAC/dc/3413a629/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Shell.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/MuzzleFlash.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/MapController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Pistol.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Guns/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" />
       </list>
     </option>
   </component>
@@ -75,7 +99,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -84,10 +108,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="676">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="676" />
       <method v="2" />
     </configuration>
   </component>
@@ -102,6 +126,11 @@
       <option name="presentableId" value="Default" />
       <updated>1587585363425</updated>
       <workItem from="1587585373141" duration="3667000" />
+      <workItem from="1587843019051" duration="22000" />
+      <workItem from="1587844416591" duration="4552000" />
+      <workItem from="1587850101241" duration="465000" />
+      <workItem from="1587850746098" duration="694000" />
+      <workItem from="1587890349282" duration="3775000" />
     </task>
     <servers />
   </component>
@@ -124,82 +153,82 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1921" height="390" key="GridCell.Tab.0.bottom" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.0.bottom" timestamp="1587892675280">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.0.center" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675280" />
+    <state width="1921" height="390" key="GridCell.Tab.0.center" timestamp="1587892675280">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.0.left" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675280" />
+    <state width="1921" height="390" key="GridCell.Tab.0.left" timestamp="1587892675280">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.0.right" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675280" />
+    <state width="1921" height="390" key="GridCell.Tab.0.right" timestamp="1587892675280">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.1.bottom" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675280" />
+    <state width="1921" height="390" key="GridCell.Tab.1.bottom" timestamp="1587892699479">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.1.center" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587892699479" />
+    <state width="1921" height="390" key="GridCell.Tab.1.center" timestamp="1587892699479">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.1.left" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587892699479" />
+    <state width="1921" height="390" key="GridCell.Tab.1.left" timestamp="1587892699479">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.1.right" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587892699479" />
+    <state width="1921" height="390" key="GridCell.Tab.1.right" timestamp="1587892699479">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.2.bottom" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587892699479" />
+    <state width="1921" height="390" key="GridCell.Tab.2.bottom" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.2.center" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.2.center" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.2.left" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.2.left" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.2.right" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.2.right" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.3.bottom" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.3.bottom" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.3.center" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.3.center" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.3.left" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.3.left" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state width="1921" height="390" key="GridCell.Tab.3.right" timestamp="1587586329104">
+    <state width="1921" height="390" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state width="1921" height="390" key="GridCell.Tab.3.right" timestamp="1587892675151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="390" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587586329104" />
-    <state x="713" y="256" key="RiderGenerateDialog" timestamp="1587759207343">
+    <state width="1921" height="390" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587892675151" />
+    <state x="713" y="256" key="RiderGenerateDialog" timestamp="1587847826714">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="713" y="256" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587759207343" />
-    <state x="461" y="184" key="SettingsEditor" timestamp="1587586253992">
+    <state x="713" y="256" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587847826714" />
+    <state x="461" y="184" key="SettingsEditor" timestamp="1587845845018">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587586253992" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1587759941796">
+    <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587845845018" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1587847891699">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587759941796" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587847891699" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -216,6 +245,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" initialLine="35">
+            <startOffsets>
+              <option value="866" />
+            </startOffsets>
+            <endOffsets>
+              <option value="909" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" initialLine="47">
+            <startOffsets>
+              <option value="1295" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1320" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" initialLine="21">
+            <startOffsets>
+              <option value="481" />
+            </startOffsets>
+            <endOffsets>
+              <option value="532" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs</url>
+          <line>26</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/Spawner.cs" initialLine="26">
+            <startOffsets>
+              <option value="596" />
+            </startOffsets>
+            <endOffsets>
+              <option value="674" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

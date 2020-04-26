@@ -16,16 +16,16 @@ namespace Com.Kearny.Shooter.Enemy
 
             Attacking
         };
+
         private State _currentState;
 
-        public ParticleSystem deathEffect;
+        public GameObject deathEffect;
+        private ParticleSystem _deathEffectParticleSystem;
 
         private NavMeshAgent _pathFinder;
         private Transform _target;
         private LivingEntity _targetEntity;
-        private Material _skinMaterial;
 
-        private Color _originalColor;
         private const float AttackDistanceThreshold = 1.5f;
         private const float TimeBetweenAttacks = 1;
         private const float Damage = 1;
@@ -38,9 +38,9 @@ namespace Com.Kearny.Shooter.Enemy
         {
             base.Start();
 
+            _deathEffectParticleSystem = deathEffect.GetComponent<ParticleSystem>();
+
             _pathFinder = GetComponent<NavMeshAgent>();
-            _skinMaterial = GetComponent<Renderer>().material;
-            _originalColor = _skinMaterial.color;
 
             if (!GameObject.FindGameObjectWithTag("Player")) return;
             _currentState = State.Chasing;
@@ -56,7 +56,7 @@ namespace Com.Kearny.Shooter.Enemy
             StartCoroutine(UpdatePath());
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (!_hasTarget) return;
             if (!(Time.time > _nextAttackTime)) return;
@@ -77,7 +77,7 @@ namespace Com.Kearny.Shooter.Enemy
             {
                 Destroy(
                     Instantiate(deathEffect, hitLocation, Quaternion.FromToRotation(Vector3.forward, hitDirection)),
-                    deathEffect.main.duration
+                    _deathEffectParticleSystem.main.duration
                 );
             }
 

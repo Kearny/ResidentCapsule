@@ -6,32 +6,27 @@ namespace Com.Kearny.Shooter.GameMechanics
     [RequireComponent(typeof(Enemy.Enemy))]
     public class Spawner : MonoBehaviour
     {
-        public Wave[] waves;
+        public Wave wave;
         public Enemy.Enemy enemy;
 
         public event System.Action<int> OnNewWave;
 
-        private Wave _currentWave;
-        private int _currentWaveNumber;
-
-        private int _enemiesRemainingToSpawn;
-        private int _enemiesRemainingAlive;
+        private int _enemiesRemainingAlive = 0;
         private float _nextSpawnTime;
 
         private MapController _mapController;
 
+
         private void Start()
         {
             _mapController = FindObjectOfType<MapController>();
-            NextWave();
         }
 
         private void Update()
         {
-            if (_enemiesRemainingToSpawn <= 0 || !(Time.time > _nextSpawnTime)) return;
+            if (_enemiesRemainingAlive > wave.enemyCount || !(Time.time > _nextSpawnTime)) return;
 
-            _enemiesRemainingToSpawn--;
-            _nextSpawnTime = Time.time + _currentWave.timeBetweenSpawns;
+            _nextSpawnTime = Time.time + wave.timeBetweenSpawns;
 
             StartCoroutine(SpawnEnemy());
         }
@@ -50,31 +45,13 @@ namespace Com.Kearny.Shooter.GameMechanics
             }
 
             var spawnedEnemy = Instantiate(enemy, randomSpawner.position, Quaternion.identity);
+            _enemiesRemainingAlive++;
             spawnedEnemy.OnDeath += OnEnemyDeath;
         }
 
         private void OnEnemyDeath()
         {
             _enemiesRemainingAlive--;
-
-            if (_enemiesRemainingAlive == 0)
-            {
-                NextWave();
-            }
-        }
-
-        private void NextWave()
-        {
-            _currentWaveNumber++;
-
-            if (_currentWaveNumber - 1 >= waves.Length) return;
-
-            _currentWave = waves[_currentWaveNumber - 1];
-
-            _enemiesRemainingToSpawn = _currentWave.enemyCount;
-            _enemiesRemainingAlive = _enemiesRemainingToSpawn;
-
-            OnNewWave?.Invoke(_currentWaveNumber);
         }
 
         [System.Serializable]

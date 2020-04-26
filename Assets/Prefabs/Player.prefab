@@ -374,10 +374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f3f80ca6c654acdadaf4f53c74e7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 9999
+  startingHealth: 5
   moveSpeed: 5
-  xSensitivity: 100
-  ySensitivity: 100
+  xSensitivity: 50
+  ySensitivity: 50
   maxAngle: 75
   mainCamera: {fileID: 5338040443079810592}
 --- !u!143 &1345412303426383172
