@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Com.Kearny.Shooter.GameMechanics;
 using UnityEngine;
 using UnityEngine.AI;
@@ -41,8 +42,12 @@ namespace Com.Kearny.Shooter.Enemy
             _deathEffectParticleSystem = deathEffect.GetComponent<ParticleSystem>();
 
             _pathFinder = GetComponent<NavMeshAgent>();
+        }
 
+        private void Awake()
+        {
             if (!GameObject.FindGameObjectWithTag("Player")) return;
+            
             _currentState = State.Chasing;
             _hasTarget = true;
 
@@ -56,19 +61,22 @@ namespace Com.Kearny.Shooter.Enemy
             StartCoroutine(UpdatePath());
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (!_hasTarget) return;
             if (!(Time.time > _nextAttackTime)) return;
 
             var squareDistanceToTarget = (_target.position - transform.position).sqrMagnitude;
-            if (!(squareDistanceToTarget < Mathf.Pow(
+            
+            // If can Attack
+            if (squareDistanceToTarget < Mathf.Pow(
                 AttackDistanceThreshold + _myCollisionRadius + _targetCollisionRadius,
                 2
-            ))) return;
-
-            _nextAttackTime = Time.time + TimeBetweenAttacks;
-            StartCoroutine(Attack());
+            ))
+            {
+                _nextAttackTime = Time.time + TimeBetweenAttacks;
+                StartCoroutine(Attack());
+            }
         }
 
         public override void TakeHit(float damage, Vector3 hitLocation, Vector3 hitDirection)

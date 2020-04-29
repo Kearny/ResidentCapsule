@@ -28,9 +28,7 @@ namespace Com.Kearny.Shooter.Weapons
         public LayerMask FPSWeaponLayer;
 
         // PUBLIC
-        public bool IsAiming { get; private set; }
         public float BaseFov { get; private set; }
-
 
         // PRIVATE
         private const float AimZoomRatio = 0.5f;
@@ -39,6 +37,7 @@ namespace Com.Kearny.Shooter.Weapons
         private Gun _equippedGun;
         private bool _isGunEquipped;
         private Vector3 _weaponMainLocalPosition;
+        private bool _isAiming;
 
         private void Start()
         {
@@ -56,7 +55,10 @@ namespace Com.Kearny.Shooter.Weapons
             if (!_isGunEquipped) return;
 
             // Handle aiming down sights
-            IsAiming = Input.GetButton("Fire2");
+            if (Input.GetButtonDown("Fire2"))
+            {
+                _isAiming = !_isAiming;
+            }
 
             // Handle shooting
             if (Input.GetButton("Fire1"))
@@ -85,7 +87,7 @@ namespace Com.Kearny.Shooter.Weapons
         {
             var weaponCameraFieldOfView = _playerCharacterController.mainCamera.fieldOfView;
 
-            if (IsAiming)
+            if (_isAiming)
             {
                 _weaponMainLocalPosition = Vector3.Lerp(_weaponMainLocalPosition,
                     aimingWeaponPosition.localPosition,
