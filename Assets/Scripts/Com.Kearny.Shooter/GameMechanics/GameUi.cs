@@ -20,7 +20,7 @@ namespace Com.Kearny.Shooter.GameMechanics
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             
-            FindObjectOfType<Player.Player>().OnDeath += OnGameOver;
+            FindObjectOfType<Player.PlayerCharacterController>().OnDeath += OnGameOver;
         }
 
         private void OnGameOver()

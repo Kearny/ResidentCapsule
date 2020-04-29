@@ -1,14 +1,12 @@
-﻿using System.IO;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
-using UnityEngine;
 using UnityEditor.PackageManager;
 using UnityEditor.PackageManager.Requests;
-using UnityEditor.Compilation;
-using System;
+using UnityEngine;
 
-
-namespace SNAP
+namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChecker
 {
     public class PackageChecker
     {
