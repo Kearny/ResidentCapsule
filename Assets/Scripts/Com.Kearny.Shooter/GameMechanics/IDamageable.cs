@@ -6,4 +6,4 @@ namespace Com.Kearny.Shooter.GameMechanics
     {
         void TakeHit(float damage, Vector3 hitLocation, Vector3 hitDirection);
     }
-}
+}    
