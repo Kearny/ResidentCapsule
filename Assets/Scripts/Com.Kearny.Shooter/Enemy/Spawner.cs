@@ -1,13 +1,13 @@
-using System.Collections;
+using Com.Kearny.Shooter.GameMechanics;
 using UnityEngine;
 
-namespace Com.Kearny.Shooter.GameMechanics
+namespace Com.Kearny.Shooter.Enemy
 {
-    [RequireComponent(typeof(Enemy.Enemy))]
+    [RequireComponent(typeof(Shooter.Enemy.Enemy))]
     public class Spawner : MonoBehaviour
     {
         public Wave wave;
-        public Enemy.Enemy enemy;
+        public Shooter.Enemy.Enemy enemy;
 
         private int _enemiesRemainingAlive = 0;
         private float _nextSpawnTime;

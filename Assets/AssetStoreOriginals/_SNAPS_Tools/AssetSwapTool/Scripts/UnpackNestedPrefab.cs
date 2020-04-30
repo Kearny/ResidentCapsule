@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEngine;
 
-
-namespace SNAP
+namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 {
     public class UnpackNestedPrefab : EditorWindow
     {
@@ -16,10 +14,9 @@ namespace SNAP
 
         
         public const string PrefabRoot = "Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets";
-        
-        
 
-        static bool IsSnapsPrototypePrefab(GameObject targetGo)
+
+        private static bool IsSnapsPrototypePrefab(GameObject targetGo)
         {
 
             PrefabAssetType prefabType = PrefabUtility.GetPrefabAssetType(targetGo);
@@ -43,7 +40,7 @@ namespace SNAP
             return false;
         }
 
-        static bool IsSnapsHDPrefab(GameObject targetGo)
+        private static bool IsSnapsHDPrefab(GameObject targetGo)
         {
 
             PrefabAssetType prefabType = PrefabUtility.GetPrefabAssetType(targetGo);
@@ -92,7 +89,7 @@ namespace SNAP
         }
 
 
-        static bool SetUnpackPrefab(GameObject target)
+        private static bool SetUnpackPrefab(GameObject target)
         {
             if (target == null)
                 return false;

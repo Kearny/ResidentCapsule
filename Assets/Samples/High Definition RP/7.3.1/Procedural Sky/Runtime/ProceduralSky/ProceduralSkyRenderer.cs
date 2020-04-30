@@ -1,22 +1,23 @@
+using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 
-namespace UnityEngine.Rendering.HighDefinition
+namespace Samples.High_Definition_RP._7._3._1.Procedural_Sky.Runtime.ProceduralSky
 {
-    class ProceduralSkyRenderer : SkyRenderer
+    internal class ProceduralSkyRenderer : SkyRenderer
     {
-        Material m_ProceduralSkyMaterial;
-        MaterialPropertyBlock m_PropertyBlock = new MaterialPropertyBlock();
+        private Material m_ProceduralSkyMaterial;
+        private MaterialPropertyBlock m_PropertyBlock = new MaterialPropertyBlock();
 
-        readonly int _SkyIntensity = Shader.PropertyToID("_SkyIntensity");
-        readonly int _PixelCoordToViewDirWS = Shader.PropertyToID("_PixelCoordToViewDirWS");
-        readonly int _SunSizeParam = Shader.PropertyToID("_SunSize");
-        readonly int _SunSizeConvergenceParam = Shader.PropertyToID("_SunSizeConvergence");
-        readonly int _AtmoshpereThicknessParam = Shader.PropertyToID("_AtmosphereThickness");
-        readonly int _SkyTintParam = Shader.PropertyToID("_SkyTint");
-        readonly int _GroundColorParam = Shader.PropertyToID("_GroundColor");
-        readonly int _SunColorParam = Shader.PropertyToID("_SunColor");
-        readonly int _SunDirectionParam = Shader.PropertyToID("_SunDirection");
+        private readonly int _SkyIntensity = Shader.PropertyToID("_SkyIntensity");
+        private readonly int _PixelCoordToViewDirWS = Shader.PropertyToID("_PixelCoordToViewDirWS");
+        private readonly int _SunSizeParam = Shader.PropertyToID("_SunSize");
+        private readonly int _SunSizeConvergenceParam = Shader.PropertyToID("_SunSizeConvergence");
+        private readonly int _AtmoshpereThicknessParam = Shader.PropertyToID("_AtmosphereThickness");
+        private readonly int _SkyTintParam = Shader.PropertyToID("_SkyTint");
+        private readonly int _GroundColorParam = Shader.PropertyToID("_GroundColor");
+        private readonly int _SunColorParam = Shader.PropertyToID("_SunColor");
+        private readonly int _SunDirectionParam = Shader.PropertyToID("_SunDirection");
 
         public ProceduralSkyRenderer()
         {

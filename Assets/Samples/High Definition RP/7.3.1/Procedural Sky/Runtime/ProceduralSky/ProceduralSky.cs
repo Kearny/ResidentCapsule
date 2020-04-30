@@ -1,6 +1,8 @@
-using System;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
 
-namespace UnityEngine.Rendering.HighDefinition
+namespace Samples.High_Definition_RP._7._3._1.Procedural_Sky.Runtime.ProceduralSky
 {
     [VolumeComponentMenu("Sky/Procedural Sky")]
     [SkyUniqueID((int)SkyType.Procedural)]

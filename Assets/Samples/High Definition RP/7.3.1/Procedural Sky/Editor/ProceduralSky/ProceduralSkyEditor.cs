@@ -1,19 +1,20 @@
+using UnityEditor;
 using UnityEditor.Rendering;
-using UnityEngine.Rendering.HighDefinition;
+using UnityEditor.Rendering.HighDefinition;
 
-namespace UnityEditor.Rendering.HighDefinition
+namespace Samples.High_Definition_RP._7._3._1.Procedural_Sky.Editor.ProceduralSky
 {
     [CanEditMultipleObjects]
-    [VolumeComponentEditor(typeof(ProceduralSky))]
-    class ProceduralSkySettingsEditor
+    [VolumeComponentEditor(typeof(Runtime.ProceduralSky.ProceduralSky))]
+    internal class ProceduralSkySettingsEditor
         : SkySettingsEditor
     {
-        SerializedDataParameter m_SunSize;
-        SerializedDataParameter m_SunSizeConvergence;
-        SerializedDataParameter m_AtmosphericThickness;
-        SerializedDataParameter m_SkyTint;
-        SerializedDataParameter m_GroundColor;
-        SerializedDataParameter m_EnableSunDisk;
+        private SerializedDataParameter m_SunSize;
+        private SerializedDataParameter m_SunSizeConvergence;
+        private SerializedDataParameter m_AtmosphericThickness;
+        private SerializedDataParameter m_SkyTint;
+        private SerializedDataParameter m_GroundColor;
+        private SerializedDataParameter m_EnableSunDisk;
 
         public override void OnEnable()
         {
@@ -22,7 +23,7 @@ namespace UnityEditor.Rendering.HighDefinition
             // Procedural sky orientation depends on the sun direction
             m_CommonUIElementsMask = 0xFFFFFFFF & ~(uint)(SkySettingsUIElement.Rotation);
 
-            var o = new PropertyFetcher<ProceduralSky>(serializedObject);
+            var o = new PropertyFetcher<Runtime.ProceduralSky.ProceduralSky>(serializedObject);
 
             m_SunSize = Unpack(o.Find(x => x.sunSize));
             m_SunSizeConvergence = Unpack(o.Find(x => x.sunSizeConvergence));
