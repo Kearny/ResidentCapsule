@@ -52,8 +52,6 @@ namespace Com.Kearny.Shooter.GameMechanics
         // UI Input
         public void StartNewGame()
         {
-            Debug.Log("StartNewGame called!");
-
             _mainCamera.enabled = false;
             
             Cursor.lockState = CursorLockMode.Locked;

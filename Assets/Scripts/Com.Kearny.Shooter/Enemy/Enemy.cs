@@ -42,10 +42,7 @@ namespace Com.Kearny.Shooter.Enemy
             _deathEffectParticleSystem = deathEffect.GetComponent<ParticleSystem>();
 
             _pathFinder = GetComponent<NavMeshAgent>();
-        }
-
-        private void Awake()
-        {
+            
             if (!GameObject.FindGameObjectWithTag("Player")) return;
             
             _currentState = State.Chasing;

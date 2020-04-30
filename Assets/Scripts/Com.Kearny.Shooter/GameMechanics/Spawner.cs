@@ -9,40 +9,29 @@ namespace Com.Kearny.Shooter.GameMechanics
         public Wave wave;
         public Enemy.Enemy enemy;
 
-        public event System.Action<int> OnNewWave;
-
         private int _enemiesRemainingAlive = 0;
         private float _nextSpawnTime;
 
-        private MapController _mapController;
+        private GameManager _gameManager;
 
 
         private void Start()
         {
-            _mapController = FindObjectOfType<MapController>();
+            _gameManager = FindObjectOfType<GameManager>();
         }
 
         private void Update()
         {
-            if (_enemiesRemainingAlive > wave.enemyCount || !(Time.time > _nextSpawnTime)) return;
+            if (_enemiesRemainingAlive >= wave.enemyCount) return;
 
             _nextSpawnTime = Time.time + wave.timeBetweenSpawns;
 
-            StartCoroutine(SpawnEnemy());
+            SpawnEnemy();
         }
 
-        private IEnumerator SpawnEnemy()
+        private void SpawnEnemy()
         {
-            const float spawnDelayBeforeFirstSpawn = 1;
-
-            var randomSpawner = _mapController.GetRandomOpenSpawner();
-
-            float spawnTimer = 0;
-            while (spawnTimer < spawnDelayBeforeFirstSpawn)
-            {
-                spawnTimer += Time.deltaTime;
-                yield return null;
-            }
+            var randomSpawner = _gameManager.GetRandomOpenSpawner();
 
             var spawnedEnemy = Instantiate(enemy, randomSpawner.position, Quaternion.identity);
             _enemiesRemainingAlive++;
