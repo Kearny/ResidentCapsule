@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Com.Kearny.Shooter.GameMechanics;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,16 +17,16 @@ namespace Com.Kearny.Shooter.Enemy
 
             Attacking
         };
+
         private State _currentState;
 
-        public ParticleSystem deathEffect;
+        public GameObject deathEffect;
+        private ParticleSystem _deathEffectParticleSystem;
 
         private NavMeshAgent _pathFinder;
         private Transform _target;
         private LivingEntity _targetEntity;
-        private Material _skinMaterial;
 
-        private Color _originalColor;
         private const float AttackDistanceThreshold = 1.5f;
         private const float TimeBetweenAttacks = 1;
         private const float Damage = 1;
@@ -38,11 +39,12 @@ namespace Com.Kearny.Shooter.Enemy
         {
             base.Start();
 
-            _pathFinder = GetComponent<NavMeshAgent>();
-            _skinMaterial = GetComponent<Renderer>().material;
-            _originalColor = _skinMaterial.color;
+            _deathEffectParticleSystem = deathEffect.GetComponent<ParticleSystem>();
 
+            _pathFinder = GetComponent<NavMeshAgent>();
+            
             if (!GameObject.FindGameObjectWithTag("Player")) return;
+            
             _currentState = State.Chasing;
             _hasTarget = true;
 
@@ -62,13 +64,16 @@ namespace Com.Kearny.Shooter.Enemy
             if (!(Time.time > _nextAttackTime)) return;
 
             var squareDistanceToTarget = (_target.position - transform.position).sqrMagnitude;
-            if (!(squareDistanceToTarget < Mathf.Pow(
+            
+            // If can Attack
+            if (squareDistanceToTarget < Mathf.Pow(
                 AttackDistanceThreshold + _myCollisionRadius + _targetCollisionRadius,
                 2
-            ))) return;
-
-            _nextAttackTime = Time.time + TimeBetweenAttacks;
-            StartCoroutine(Attack());
+            ))
+            {
+                _nextAttackTime = Time.time + TimeBetweenAttacks;
+                StartCoroutine(Attack());
+            }
         }
 
         public override void TakeHit(float damage, Vector3 hitLocation, Vector3 hitDirection)
@@ -77,7 +82,7 @@ namespace Com.Kearny.Shooter.Enemy
             {
                 Destroy(
                     Instantiate(deathEffect, hitLocation, Quaternion.FromToRotation(Vector3.forward, hitDirection)),
-                    deathEffect.main.duration
+                    _deathEffectParticleSystem.main.duration
                 );
             }
 
@@ -104,7 +109,6 @@ namespace Com.Kearny.Shooter.Enemy
             const float attackSpeed = 3;
             float percent = 0;
 
-            _skinMaterial.color = Color.red;
             var hasAppliedDamage = false;
 
             while (percent <= 1)
@@ -121,8 +125,6 @@ namespace Com.Kearny.Shooter.Enemy
 
                 yield return null;
             }
-
-            _skinMaterial.color = _originalColor;
 
             _currentState = State.Chasing;
         }

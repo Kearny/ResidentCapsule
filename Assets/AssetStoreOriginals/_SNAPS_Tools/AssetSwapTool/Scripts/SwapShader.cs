@@ -1,13 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 using System.IO;
+using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEditor.PackageManager.Requests;
-using UnityEditor.Compilation;
+using UnityEngine;
 
-namespace SNAP
+namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 { 
     public enum SnapRP
     {
@@ -19,10 +17,9 @@ namespace SNAP
 
     public class SwapShader : MonoBehaviour
     {
-
-        const string PackageNameProbuilder = "com.unity.probuilder";
-        const string PackageNameHDRP = "com.unity.render-pipelines.high-definition";
-        const string PackageNameLWRP = "com.unity.render-pipelines.lightweight";
+        private const string PackageNameProbuilder = "com.unity.probuilder";
+        private const string PackageNameHDRP = "com.unity.render-pipelines.high-definition";
+        private const string PackageNameLWRP = "com.unity.render-pipelines.lightweight";
 
 
 

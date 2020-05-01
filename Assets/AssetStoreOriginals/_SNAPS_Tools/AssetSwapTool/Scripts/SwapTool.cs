@@ -1,21 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 using System.IO;
 using System.Linq;
-using UnityEditor.PackageManager;
-using UnityEditor.PackageManager.Requests;
-using UnityEditor.Compilation;
 using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEngine;
 
-namespace SNAP
+namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 {
 
     public class SwapTool : EditorWindow
     {
-
-        static SnapRP currentRP;
+        private static SnapRP currentRP;
 
 
         public static string PrefabPath;
@@ -23,10 +19,10 @@ namespace SNAP
 
         public static string PrefabHDPath;
 
-        static bool groupEnabled;
+        private static bool groupEnabled;
 
-        static string selectedRootPath;
-        static string selectedHDRootPath;
+        private static string selectedRootPath;
+        private static string selectedHDRootPath;
 
 
         private bool ValidateToolSettings()
@@ -83,7 +79,7 @@ namespace SNAP
         }
 
 
-        static GameObject LoadPrefabByAssetPath(string TargetPath)
+        private static GameObject LoadPrefabByAssetPath(string TargetPath)
         {
             Object LoadedAsset = AssetDatabase.LoadAssetAtPath(TargetPath, typeof(GameObject));
 
@@ -92,7 +88,7 @@ namespace SNAP
             return ((GameObject)InstantiateObj);
         }
 
-        static bool SwapGameObject(GameObject sourceGo, GameObject targetGo)
+        private static bool SwapGameObject(GameObject sourceGo, GameObject targetGo)
         {
 
             GameObject genGameObj;
@@ -122,7 +118,7 @@ namespace SNAP
             return true;
         }
 
-        static bool SwapGameObjectByTargetPath(GameObject sourceGo, string targetPath)
+        private static bool SwapGameObjectByTargetPath(GameObject sourceGo, string targetPath)
         {
             try
             {
@@ -154,7 +150,7 @@ namespace SNAP
             }
         }
 
-        static void ExchangeAssetToSnap()
+        private static void ExchangeAssetToSnap()
         {
             Transform[] transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
 
@@ -207,7 +203,7 @@ namespace SNAP
         }
 
 
-        static bool ReExchangeSnapToObject()
+        private static bool ReExchangeSnapToObject()
         {
             bool swapResult = false;
 
@@ -254,7 +250,7 @@ namespace SNAP
         }
 
 
-        static void ExchangeSnapToObject()
+        private static void ExchangeSnapToObject()
         {
             
             Transform[] transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
@@ -398,8 +394,7 @@ namespace SNAP
         }
 
 
-
-        static void BulkExchangeSnapToHD()
+        private static void BulkExchangeSnapToHD()
         {
             
             Transform[] sceneTransforms = GameObject.FindObjectsOfType<Transform>();
@@ -430,7 +425,7 @@ namespace SNAP
 
         }
 
-        static void BulkExchangeHDToSnap()
+        private static void BulkExchangeHDToSnap()
         {
             Transform[] sceneTransforms = GameObject.FindObjectsOfType<Transform>();
 
@@ -548,7 +543,7 @@ namespace SNAP
 
 
         [MenuItem("Snaps/Asset Swap Tool")]
-        static void ShowSwapTool()
+        private static void ShowSwapTool()
         {
             SwapTool SwapWindow = EditorWindow.GetWindow<SwapTool>();
 
@@ -790,14 +785,14 @@ namespace SNAP
 
         }
 
-        
-        static void SwapObject()
+
+        private static void SwapObject()
         {
             ExchangeAssetToSnap();
         }
 
 
-        static void SwapSnapToObject()
+        private static void SwapSnapToObject()
         {
             ExchangeSnapToObject();
         }

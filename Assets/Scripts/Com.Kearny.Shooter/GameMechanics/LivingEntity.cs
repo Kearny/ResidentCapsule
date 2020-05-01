@@ -17,7 +17,7 @@ namespace Com.Kearny.Shooter.GameMechanics
 
         public virtual void TakeHit(float damage, Vector3 hitLocation, Vector3 hitDirection)
         {
-           TakeDamage(damage);
+            TakeDamage(damage);
         }
 
         public void TakeDamage(float damage)

@@ -1,14 +1,12 @@
-﻿using System.IO;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
-using UnityEngine;
 using UnityEditor.PackageManager;
 using UnityEditor.PackageManager.Requests;
-using UnityEditor.Compilation;
-using System;
+using UnityEngine;
 
-
-namespace SNAP
+namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChecker
 {
     public class PackageChecker
     {
@@ -23,7 +21,7 @@ namespace SNAP
 
 
         [InitializeOnLoadMethod]
-        static void CheckPackage()
+        private static void CheckPackage()
         {
             string filePath = Application.dataPath + "/../Library/PackageChecked";
 
@@ -119,7 +117,7 @@ namespace SNAP
         }
 
 
-        static AddRequest InstallSelectedPackage(string packageName, string packageVersion)
+        private static AddRequest InstallSelectedPackage(string packageName, string packageVersion)
         {
 
             if (packageVersion != null)
@@ -139,10 +137,9 @@ namespace SNAP
 
             return newPackage;
         }
-     
-     
 
-        static void ReimportPackagesByKeyword()
+
+        private static void ReimportPackagesByKeyword()
         {
 
             AssetDatabase.Refresh();
