@@ -39,6 +39,7 @@
             </e>
           </e>
         </e>
+        <e p="BlinkingLight.cs" t="Include" />
         <e p="Samples" t="Include">
           <e p="High Definition RP" t="Include">
             <e p="7.3.1" t="Include">
