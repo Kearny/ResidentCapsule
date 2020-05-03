@@ -47,9 +47,9 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
             foreach (var package in listRequest.Result)
             {
-                string[] tokens = package.packageId.Split('@');
+                var tokens = package.packageId.Split('@');
 
-                string packageName = tokens[0];
+                var packageName = tokens[0];
                 tokens.Initialize();
 
                 if (!allInstalledPackages.Contains(packageName))
@@ -86,14 +86,14 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             
             DirectoryInfo dInfo = new DirectoryInfo(Path.Combine(Application.dataPath, "../"));
             
-            string rootPathRel = materialRootFullPath.Replace(dInfo.FullName.Replace("\\","/"), string.Empty);
+            var rootPathRel = materialRootFullPath.Replace(dInfo.FullName.Replace("\\","/"), string.Empty);
 
-            string[] materialPaths = AssetDatabase.FindAssets("t:material", new string[] { rootPathRel });
+            var materialPaths = AssetDatabase.FindAssets("t:material", new string[] { rootPathRel });
 
 
-            foreach (string materialPath in materialPaths)
+            foreach (var materialPath in materialPaths)
             {
-                string assetPath = AssetDatabase.GUIDToAssetPath(materialPath);
+                var assetPath = AssetDatabase.GUIDToAssetPath(materialPath);
                 Material exMaterial = (Material)AssetDatabase.LoadAssetAtPath(assetPath, typeof(Material));
 
 
@@ -106,7 +106,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 else
                     smoothness = exMaterial.GetFloat("_Smoothness");
 
-                float metallic = exMaterial.GetFloat("_Metallic");
+                var metallic = exMaterial.GetFloat("_Metallic");
 
                 
 

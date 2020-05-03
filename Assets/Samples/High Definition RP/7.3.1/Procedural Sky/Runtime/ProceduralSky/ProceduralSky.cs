@@ -23,7 +23,7 @@ namespace Samples.High_Definition_RP._7._3._1.Procedural_Sky.Runtime.ProceduralS
 
         public override int GetHashCode()
         {
-            int hash = base.GetHashCode();
+            var hash = base.GetHashCode();
 
             unchecked
             {

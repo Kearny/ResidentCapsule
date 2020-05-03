@@ -6,22 +6,29 @@ namespace Com.Kearny.Shooter.Weapons
     {
         protected abstract FireMode FireMode { get; set; }
 
+        // EDITOR
+        [Header("References")]
         public Transform muzzle;
         public Projectile projectile;
+        
+        public Transform shell;
+        public Transform shellEjection;
+        
+        [Header("Gun properties")]
         public float msBetweenShots = 100;
         public float muzzleVelocity = 35;
 
-        public Transform shell;
-        public Transform shellEjection;
-
+        public float recoilForce = 1;
+        
+        // PUBLIC
+        
+        // PRIVATE
+        private const int BurstCount = 3;
+        
         private MuzzleFlash _muzzleFlash;
-
         private float _nextShotTime;
-
         private bool _triggerReleasedSinceLastShot = true;
         private int _shotsRemainingInBurst;
-        
-        private const int BurstCount = 3;
 
         private void Start()
         {
@@ -29,13 +36,13 @@ namespace Com.Kearny.Shooter.Weapons
             _shotsRemainingInBurst = BurstCount;
         }
 
-        private void Shoot()
+        private bool Shoot()
         {
-            if (!(Time.time >= _nextShotTime)) return;
+            if (!(Time.time >= _nextShotTime)) return false;
             
             if (FireMode == FireMode.Burst && _shotsRemainingInBurst == 0)
             {
-                return;
+                return false;
             }
 
             switch (FireMode)
@@ -44,7 +51,7 @@ namespace Com.Kearny.Shooter.Weapons
                     _shotsRemainingInBurst--;
                     break;
                 case FireMode.SemiAuto when !_triggerReleasedSinceLastShot:
-                    return;
+                    return false;
             }
 
             _nextShotTime = Time.time + msBetweenShots / 1000;
@@ -54,12 +61,17 @@ namespace Com.Kearny.Shooter.Weapons
             Instantiate(shell, shellEjection.position, shellEjection.rotation);
 
             _muzzleFlash.Activate();
+
+            // Weapon has fired
+            return true;
         }
 
-        public void OnTriggerHold()
+        public bool OnTriggerHold()
         {
-            Shoot();
+            var hasFired = Shoot();
             _triggerReleasedSinceLastShot = false;
+
+            return hasFired;
         }
 
         public void OnTriggerRelease()

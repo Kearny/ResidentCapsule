@@ -23,7 +23,7 @@ namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChe
         [InitializeOnLoadMethod]
         private static void CheckPackage()
         {
-            string filePath = Application.dataPath + "/../Library/PackageChecked";
+            var filePath = Application.dataPath + "/../Library/PackageChecked";
 
  
             packageToAdd = new List<PackageEntry>();
@@ -39,9 +39,9 @@ namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChe
                 }
                 else
                 {
-                    string packageListPath = packageListFile[0];
+                    var packageListPath = packageListFile[0];
                     packageToAdd = new List<PackageEntry>();
-                    string[] content = File.ReadAllLines(packageListPath);
+                    var content = File.ReadAllLines(packageListPath);
                     foreach (var line in content)
                     {
                         var split = line.Split('@');
@@ -70,14 +70,14 @@ namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChe
 
                     installRequired = new bool[packageToAdd.Count];
 
-                    for (int i = 0; i < installRequired.Length; i++)
+                    for (var i = 0; i < installRequired.Length; i++)
                         installRequired[i] = true;
 
                      
                     
                     foreach (var package in listRequest.Result)
                     {
-                        for (int i = 0; i < packageToAdd.Count; i++)
+                        for (var i = 0; i < packageToAdd.Count; i++)
                         {
                             if (package.packageId.Contains(packageToAdd[i].name))
                             {
@@ -101,7 +101,7 @@ namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChe
                     }
                 
 
-                    for (int i = 0; i < packageToAdd.Count; i++)
+                    for (var i = 0; i < packageToAdd.Count; i++)
                     {
                         if (installRequired[i])
                             addRequests[i] = InstallSelectedPackage(packageToAdd[i].name, packageToAdd[i].version);
@@ -154,10 +154,10 @@ namespace AssetStoreOriginals._SNAPS_PrototypingAssets.Scripts.Editor.PackageChe
             var versionASplit = versionA.Split('.');
             var versionBSplit = versionB.Split('.');
 
-            int previewA = 0;
-            int previewB = 0;
-            int patchA = 0;
-            int patchB = 0;
+            var previewA = 0;
+            var previewB = 0;
+            var patchA = 0;
+            var patchB = 0;
 
             var majorA = Convert.ToInt32(versionASplit[0]);
             var minorA = Convert.ToInt32(versionASplit[1]);

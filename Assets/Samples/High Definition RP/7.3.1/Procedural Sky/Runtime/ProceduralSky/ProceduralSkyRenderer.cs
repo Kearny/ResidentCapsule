@@ -42,7 +42,7 @@ namespace Samples.High_Definition_RP._7._3._1.Procedural_Sky.Runtime.ProceduralS
             // Default values when no sun is provided
             Color sunColor = Color.white;
             Vector3 sunDirection = Vector3.zero;
-            float sunSize = 0.0f;
+            var sunSize = 0.0f;
 
             if (builtinParams.sunLight != null)
             {

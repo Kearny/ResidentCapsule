@@ -37,12 +37,12 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             if (!Directory.Exists(PrefabHDPath))
                 return false;
 
-            string[] prefabFiles = Directory.GetFiles(PrefabPath, "*_" + PrefabPostfix.Trim() + ".prefab", SearchOption.AllDirectories);
+            var prefabFiles = Directory.GetFiles(PrefabPath, "*_" + PrefabPostfix.Trim() + ".prefab", SearchOption.AllDirectories);
 
             if (prefabFiles.Length == 0)
                 return false;
 
-            string[] prefabHDFiles = Directory.GetFiles(PrefabHDPath, "*_" + PrefabPostfix.Trim() + ".prefab", SearchOption.AllDirectories);
+            var prefabHDFiles = Directory.GetFiles(PrefabHDPath, "*_" + PrefabPostfix.Trim() + ".prefab", SearchOption.AllDirectories);
 
             if (prefabHDFiles.Length == 0)
                 return false;
@@ -52,7 +52,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         public static string GetPrefabPath(Object asset)
         {
-            string AssetPath = string.Empty;
+            var AssetPath = string.Empty;
 
             Object targetObj = PrefabUtility.GetCorrespondingObjectFromSource<Object>(asset);
 
@@ -66,7 +66,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         public static string GetOriginalPrefabPath(Object asset)
         {
-            string AssetPath = string.Empty;
+            var AssetPath = string.Empty;
 
             Object targetObj = PrefabUtility.GetCorrespondingObjectFromOriginalSource<Object>(asset);
 
@@ -152,7 +152,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         private static void ExchangeAssetToSnap()
         {
-            Transform[] transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
+            var transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
 
             if (transforms.Length == 0)
             {
@@ -160,7 +160,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 return;
             }
 
-            Dictionary<string, string> SnapInfo = new Dictionary<string, string>();
+            var SnapInfo = new Dictionary<string, string>();
             SnapInfo.Clear();
 
             SnapInfo = GetSnapMatchingTable(PrefabPath);
@@ -169,7 +169,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             foreach (Transform t in transforms)
             {
 
-                string FoundPrefabPath = GetPrefabPath(t.gameObject);
+                var FoundPrefabPath = GetPrefabPath(t.gameObject);
 
                 if (FoundPrefabPath.ToLower().Contains(PrefabPath.Replace(Application.dataPath, string.Empty).ToLower()))
                     return;
@@ -182,10 +182,10 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
                 if (SnapInfo.ContainsKey(FoundPrefabPath))
                 {
-                    string targetPrefab = string.Empty;
+                    var targetPrefab = string.Empty;
                     if (SnapInfo.TryGetValue(FoundPrefabPath, out targetPrefab))
                     {
-                        bool swapResult = SwapGameObjectByTargetPath(t.gameObject, targetPrefab);
+                        var swapResult = SwapGameObjectByTargetPath(t.gameObject, targetPrefab);
 
                         if (swapResult == false)
                             Debug.LogWarning(string.Format("Could not swap the object : {0}", t.name));
@@ -205,9 +205,9 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         private static bool ReExchangeSnapToObject()
         {
-            bool swapResult = false;
+            var swapResult = false;
 
-            Transform[] transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
+            var transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
 
             if (transforms.Length == 0)
             {
@@ -215,7 +215,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 return false;
             }
 
-            Dictionary<string, string> ObjInfo = new Dictionary<string, string>();
+            var ObjInfo = new Dictionary<string, string>();
             ObjInfo.Clear();
 
             ObjInfo = GetObjectMatchingTable(PrefabPath);
@@ -224,7 +224,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             foreach (Transform t in transforms)
             {
 
-                string FoundPrefabPath = GetPrefabPath(t.gameObject);
+                var FoundPrefabPath = GetPrefabPath(t.gameObject);
 
                 if (!FoundPrefabPath.ToLower().Contains(PrefabPath.Replace(Application.dataPath, string.Empty).ToLower()))
                     return false;
@@ -234,7 +234,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
                 if (ObjInfo.ContainsKey(FoundPrefabPath))
                 {
-                    string targetPrefab = string.Empty;
+                    var targetPrefab = string.Empty;
                     if (ObjInfo.TryGetValue(FoundPrefabPath, out targetPrefab))
                     {
                         swapResult = SwapGameObjectByTargetPath(t.gameObject, targetPrefab);
@@ -253,7 +253,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
         private static void ExchangeSnapToObject()
         {
             
-            Transform[] transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
+            var transforms = Selection.GetTransforms(SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
 
             if (transforms.Length == 0)
             {
@@ -261,7 +261,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 return;
             }
 
-            Dictionary<string, string> ObjInfo = new Dictionary<string, string>();
+            var ObjInfo = new Dictionary<string, string>();
             ObjInfo.Clear();
 
             ObjInfo = GetObjectMatchingTable(PrefabPath);
@@ -270,7 +270,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             foreach (Transform t in transforms)
             {
 
-                string FoundPrefabPath = GetPrefabPath(t.gameObject);
+                var FoundPrefabPath = GetPrefabPath(t.gameObject);
 
                 if (!FoundPrefabPath.ToLower().Contains( PrefabPath.Replace(Application.dataPath, string.Empty).ToLower() ))
                     return;
@@ -280,10 +280,10 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
                 if (ObjInfo.ContainsKey(FoundPrefabPath))
                 {
-                    string targetPrefab = string.Empty;
+                    var targetPrefab = string.Empty;
                     if (ObjInfo.TryGetValue(FoundPrefabPath, out targetPrefab))
                     {
-                        bool swapResult = SwapGameObjectByTargetPath(t.gameObject, targetPrefab);
+                        var swapResult = SwapGameObjectByTargetPath(t.gameObject, targetPrefab);
 
                         if (swapResult == false)
                             Debug.LogWarning(string.Format("Could not swap the object : {0}", t.name));
@@ -302,7 +302,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                     Regex reg = new Regex(@"_snaps[0-9][0-9][0-9]$");
 
                     
-                    string pPath = GetPrefabPath(t.gameObject).ToLower();
+                    var pPath = GetPrefabPath(t.gameObject).ToLower();
 
 
                     Undo.RegisterCompleteObjectUndo(t.gameObject, "Before unpacking");
@@ -311,9 +311,9 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                     UnpackNestedPrefab.UnpackSelectedPrefab(t.gameObject);
                     
 
-                    Transform[] childTransforms = t.gameObject.GetComponentsInChildren<Transform>();
+                    var childTransforms = t.gameObject.GetComponentsInChildren<Transform>();
 
-                    int successCount = 0;
+                    var successCount = 0;
 
                     foreach (Transform childTransform in childTransforms)
                     {
@@ -340,11 +340,11 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                         continue;
                     }
                     
-                    string GenSnapsHDPath = UnpackNestedPrefab.CreateGenSnapsHDFolder();
-                    string GenSnapsPrototypePath = UnpackNestedPrefab.CreateGenSnapsPrototypeFolder();
+                    var GenSnapsHDPath = UnpackNestedPrefab.CreateGenSnapsHDFolder();
+                    var GenSnapsPrototypePath = UnpackNestedPrefab.CreateGenSnapsPrototypeFolder();
 
 
-                    string GenSnapsName = string.Empty;
+                    var GenSnapsName = string.Empty;
 
                     if (reg.IsMatch(FoundPrefabPath))
                     {
@@ -397,7 +397,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
         private static void BulkExchangeSnapToHD()
         {
             
-            Transform[] sceneTransforms = FindObjectsOfType<Transform>();
+            var sceneTransforms = FindObjectsOfType<Transform>();
 
             ArrayList targetTransform = new ArrayList();
 
@@ -414,7 +414,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
            
             }
             
-            for(int i=0;i<targetTransform.Count;i++)
+            for(var i=0;i<targetTransform.Count;i++)
             {
                 EditorUtility.DisplayProgressBar("Switching prefabs...", string.Format("{0}/{1} prefabs switched.", (i).ToString(), targetTransform.Count.ToString()), ((float)i / (float)targetTransform.Count ));
                 Selection.activeObject = (GameObject)targetTransform[i];
@@ -427,7 +427,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         private static void BulkExchangeHDToSnap()
         {
-            Transform[] sceneTransforms = FindObjectsOfType<Transform>();
+            var sceneTransforms = FindObjectsOfType<Transform>();
 
             ArrayList targetTransform = new ArrayList();
 
@@ -442,7 +442,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 }
             }
 
-            for (int i = 0; i < targetTransform.Count; i++)
+            for (var i = 0; i < targetTransform.Count; i++)
             {
                 EditorUtility.DisplayProgressBar("Switching prefabs...", string.Format("{0}/{1} prefabs switched.", (i).ToString(), targetTransform.Count.ToString()), ((float)i / (float)targetTransform.Count));
                 Selection.activeObject = (GameObject)targetTransform[i];
@@ -459,21 +459,21 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
             
 
-            Dictionary<string, string> ObjDic = new Dictionary<string, string>();
+            var ObjDic = new Dictionary<string, string>();
             ObjDic.Clear();
 
             DirectoryInfo dirInfo = new DirectoryInfo(Application.dataPath + "/../");
 
-            string dataPath = dirInfo.FullName.Replace("\\", "/");
+            var dataPath = dirInfo.FullName.Replace("\\", "/");
 
-            string targetPrefabPath = searchingRootPath.ToLower().Replace(dataPath.ToLower(), string.Empty);
+            var targetPrefabPath = searchingRootPath.ToLower().Replace(dataPath.ToLower(), string.Empty);
 
 
             //Debug.Log("@" + PrefabHDPath.ToLower().Replace(dataPath.ToLower(), string.Empty));
 
             
            
-            string[] HDroots = new string[1];
+            var HDroots = new string[1];
             HDroots[0] = PrefabHDPath.ToLower().Replace(dataPath.ToLower(), string.Empty);
 
             if (AssetDatabase.IsValidFolder("Assets/GenSnapsHD"))
@@ -484,15 +484,15 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             }
 
             //string[] Assets = AssetDatabase.FindAssets("t:Prefab", new[] { "Assets" });
-            string[] Assets = AssetDatabase.FindAssets("t:Prefab", HDroots);
+            var Assets = AssetDatabase.FindAssets("t:Prefab", HDroots);
 
 
 
 
-            foreach (string asset in Assets)
+            foreach (var asset in Assets)
             {
-                string assetPath = AssetDatabase.GUIDToAssetPath(asset);
-                string assetNameWithoutEx = Path.GetFileNameWithoutExtension(assetPath).Trim();
+                var assetPath = AssetDatabase.GUIDToAssetPath(asset);
+                var assetNameWithoutEx = Path.GetFileNameWithoutExtension(assetPath).Trim();
 
                 if (assetNameWithoutEx.ToLower().Contains(PrefabPostfix.ToLower()))
                 {
@@ -512,19 +512,19 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
             DirectoryInfo dirInfo = new DirectoryInfo(Application.dataPath + "/../");
 
-            string ourput = dirInfo.FullName.Replace("\\", "/");
+            var ourput = dirInfo.FullName.Replace("\\", "/");
 
-            string[] SnapAssets = AssetDatabase.FindAssets("t:Prefab", new[] { searchingRootPath.Replace(ourput, string.Empty) });
+            var SnapAssets = AssetDatabase.FindAssets("t:Prefab", new[] { searchingRootPath.Replace(ourput, string.Empty) });
 
 
-            Dictionary<string, string> Snap = new Dictionary<string, string>();
+            var Snap = new Dictionary<string, string>();
             Snap.Clear();
 
 
-            foreach (string asset in SnapAssets)
+            foreach (var asset in SnapAssets)
             {
-                string assetPath = AssetDatabase.GUIDToAssetPath(asset);
-                string assetNameWithoutEx = Path.GetFileNameWithoutExtension(assetPath);
+                var assetPath = AssetDatabase.GUIDToAssetPath(asset);
+                var assetNameWithoutEx = Path.GetFileNameWithoutExtension(assetPath);
 
 
                 if (assetNameWithoutEx.ToLower().Contains(PrefabPostfix.ToLower()))
@@ -571,19 +571,19 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         private string SearchFrequentPostfix(string targetPath)
         {
-            string outString = string.Empty;
+            var outString = string.Empty;
 
-            Dictionary<string, int> postfixDic = new Dictionary<string, int>();
+            var postfixDic = new Dictionary<string, int>();
 
             if (!Directory.Exists(targetPath))
                 return outString;
 
-            string[] sPrefabs = Directory.GetFiles(targetPath, "*_snaps*.prefab", SearchOption.AllDirectories);
+            var sPrefabs = Directory.GetFiles(targetPath, "*_snaps*.prefab", SearchOption.AllDirectories);
 
-            foreach(string prefab in sPrefabs)
+            foreach(var prefab in sPrefabs)
             {
-                string[] tokens = Path.GetFileNameWithoutExtension(prefab).ToString().Split('_');
-                string lasttoken = tokens[tokens.Length - 1].ToLower().Trim();
+                var tokens = Path.GetFileNameWithoutExtension(prefab).ToString().Split('_');
+                var lasttoken = tokens[tokens.Length - 1].ToLower().Trim();
 
 
                 if (!postfixDic.ContainsKey(lasttoken))
@@ -619,9 +619,9 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 return false;
             }
 
-            string frequentpostFix = SearchFrequentPostfix(targetRootPath);
+            var frequentpostFix = SearchFrequentPostfix(targetRootPath);
 
-            string[] foundSnapPrefabs = Directory.GetFiles(targetRootPath, "*_" + frequentpostFix + ".prefab", SearchOption.AllDirectories);
+            var foundSnapPrefabs = Directory.GetFiles(targetRootPath, "*_" + frequentpostFix + ".prefab", SearchOption.AllDirectories);
 
             if (foundSnapPrefabs.Length == 0)
             {
@@ -681,7 +681,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             
             if (GUILayout.Button(new GUIContent("Select a different project directory for Snaps Prototype prefabs.", "Set a root path to get a list of Snaps Prototype prefabs.")))
             {
-                string targetPath = Path.Combine(Application.dataPath, @"AssetStoreOriginals\_SNAPS_PrototypingAssets");
+                var targetPath = Path.Combine(Application.dataPath, @"AssetStoreOriginals\_SNAPS_PrototypingAssets");
 
                 if (Directory.Exists(targetPath))
                 {
@@ -703,7 +703,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
             if (GUILayout.Button(new GUIContent("Select a different project directory for Snaps Art / Art HD prefabs.", "Set a root path to get a list of Snaps Art / Art HD prefabs.")))
             {
-                string targetPath = Application.dataPath;
+                var targetPath = Application.dataPath;
 
                 selectedHDRootPath = EditorUtility.OpenFolderPanel("Select a root path containing Snaps Prototype prefabs", Application.dataPath, string.Empty);
 

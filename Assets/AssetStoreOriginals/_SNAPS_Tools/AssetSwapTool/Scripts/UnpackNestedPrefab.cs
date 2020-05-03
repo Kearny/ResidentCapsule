@@ -27,7 +27,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
             Regex reg = new Regex(@"_snaps[0-9][0-9][0-9].prefab$");
 
-            string PrefabPath = SwapTool.GetOriginalPrefabPath(targetGo).ToLower();
+            var PrefabPath = SwapTool.GetOriginalPrefabPath(targetGo).ToLower();
 
 
 
@@ -53,9 +53,9 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
                 Regex reg = new Regex(@"_snaps[0-9][0-9][0-9].prefab$");
 
-                string PrefabPath = SwapTool.GetOriginalPrefabPath(targetGo).ToLower();
+                var PrefabPath = SwapTool.GetOriginalPrefabPath(targetGo).ToLower();
 
-                string SnapsPrototypePath = SwapTool.PrefabPath.Replace(Application.dataPath, string.Empty).ToLower();
+                var SnapsPrototypePath = SwapTool.PrefabPath.Replace(Application.dataPath, string.Empty).ToLower();
 
                 if (reg.IsMatch(PrefabPath) && !PrefabPath.Contains(SnapsPrototypePath))
                     return true;
@@ -66,7 +66,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         public static string CreateGenSnapsHDFolder()
         {
-            string createdPath = string.Format("Assets/{0}", GenSnapsHDPath);
+            var createdPath = string.Format("Assets/{0}", GenSnapsHDPath);
 
             if (!AssetDatabase.IsValidFolder(createdPath))
             {
@@ -78,7 +78,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         public static string CreateGenSnapsPrototypeFolder()
         {
-            string createdPath = string.Format("{0}/{1}", PrefabRoot, GenSnapsPrototypePath);
+            var createdPath = string.Format("{0}/{1}", PrefabRoot, GenSnapsPrototypePath);
 
             if (!AssetDatabase.IsValidFolder(createdPath))
             {
@@ -97,11 +97,11 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             if (IsSnapsHDPrefab(target))
                 return false;
 
-            string PrefabPath = SwapTool.PrefabPath;
+            var PrefabPath = SwapTool.PrefabPath;
 
-            Dictionary<string,string> ObjInfo = SwapTool.GetObjectMatchingTable(PrefabPath);
+            var ObjInfo = SwapTool.GetObjectMatchingTable(PrefabPath);
 
-            string targetPrefabPath = Path.GetFileNameWithoutExtension( SwapTool.GetOriginalPrefabPath(target).ToLower() );
+            var targetPrefabPath = Path.GetFileNameWithoutExtension( SwapTool.GetOriginalPrefabPath(target).ToLower() );
 
             if (ObjInfo.ContainsKey(targetPrefabPath))
                 return false;
@@ -124,7 +124,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         public static void UnpackSelectedPrefab(GameObject currentObject)
         {
-            Stack<GameObject> NestedGameObject = new Stack<GameObject>();
+            var NestedGameObject = new Stack<GameObject>();
 
             NestedGameObject.Clear();
 
@@ -132,7 +132,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             if (SetUnpackPrefab(currentObject) == false)
                 return;
 
-            for (int i = 0; i < currentObject.transform.childCount; i++)
+            for (var i = 0; i < currentObject.transform.childCount; i++)
             {
                 GameObject childGameObject = currentObject.transform.GetChild(i).gameObject;
 
@@ -146,7 +146,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
                 if (SetUnpackPrefab(gObj) == false)
                     continue;
 
-                for (int i = 0; i < gObj.transform.childCount; i++)
+                for (var i = 0; i < gObj.transform.childCount; i++)
                 {
                     NestedGameObject.Push(gObj.transform.GetChild(i).gameObject);
                 }
