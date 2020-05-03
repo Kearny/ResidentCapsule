@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485175917976106639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.304, y: -0.228, z: 0.569}
+  m_LocalPosition: {x: 0.451, y: -0.271, z: 0.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3958652565812759865}
@@ -295,8 +295,8 @@ GameObject:
   - component: {fileID: 5338040443859239049}
   - component: {fileID: 5338040443859239054}
   - component: {fileID: 5338040443859239055}
-  - component: {fileID: 6766979883553014870}
   - component: {fileID: 1345412303426383172}
+  - component: {fileID: 6766979883553014870}
   - component: {fileID: 9074405657373985608}
   m_Layer: 0
   m_Name: Player
@@ -381,24 +381,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6766979883553014870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5338040443859239052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f3f80ca6c654acdadaf4f53c74e7bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 5
-  mainCamera: {fileID: 5338040443079810592}
-  xSensitivity: 75
-  ySensitivity: 75
-  maxAngle: 75
-  moveSpeed: 5
 --- !u!143 &1345412303426383172
 CharacterController:
   m_ObjectHideFlags: 0
@@ -417,6 +399,26 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6766979883553014870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338040443859239052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f3f80ca6c654acdadaf4f53c74e7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 5
+  mainCamera: {fileID: 5338040443079810592}
+  xSensitivity: 75
+  ySensitivity: 75
+  maxAngle: 75
+  moveSpeed: 5
+  jumpForce: 5
+  gravity: 40
 --- !u!114 &9074405657373985608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +437,7 @@ MonoBehaviour:
   defaultWeaponPosition: {fileID: 2290361746180113090}
   aimingWeaponPosition: {fileID: 2687910389619021243}
   downWeaponPosition: {fileID: 5604874975996047127}
-  aimingAnimationSpeed: 10
+  aimingAnimationSpeed: 5
   FPSWeaponLayer:
     serializedVersion: 2
     m_Bits: 1024

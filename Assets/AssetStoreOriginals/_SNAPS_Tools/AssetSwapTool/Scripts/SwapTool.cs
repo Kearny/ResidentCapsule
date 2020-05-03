@@ -101,7 +101,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
             }
             else
             {
-                genGameObj = (GameObject)Editor.Instantiate(targetGo);
+                genGameObj = (GameObject)Instantiate(targetGo);
             }
 
             Transform gTransform = genGameObj.transform;
@@ -397,7 +397,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
         private static void BulkExchangeSnapToHD()
         {
             
-            Transform[] sceneTransforms = GameObject.FindObjectsOfType<Transform>();
+            Transform[] sceneTransforms = FindObjectsOfType<Transform>();
 
             ArrayList targetTransform = new ArrayList();
 
@@ -427,7 +427,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
 
         private static void BulkExchangeHDToSnap()
         {
-            Transform[] sceneTransforms = GameObject.FindObjectsOfType<Transform>();
+            Transform[] sceneTransforms = FindObjectsOfType<Transform>();
 
             ArrayList targetTransform = new ArrayList();
 
@@ -545,7 +545,7 @@ namespace AssetStoreOriginals._SNAPS_Tools.AssetSwapTool.Scripts
         [MenuItem("Snaps/Asset Swap Tool")]
         private static void ShowSwapTool()
         {
-            SwapTool SwapWindow = EditorWindow.GetWindow<SwapTool>();
+            SwapTool SwapWindow = GetWindow<SwapTool>();
 
             SwapWindow.titleContent.text = "Asset Swap Tool";
 

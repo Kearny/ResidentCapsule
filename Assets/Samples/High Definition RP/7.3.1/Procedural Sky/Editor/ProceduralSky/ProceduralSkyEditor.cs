@@ -44,7 +44,7 @@ namespace Samples.High_Definition_RP._7._3._1.Procedural_Sky.Editor.ProceduralSk
 
             EditorGUILayout.Space();
 
-            base.CommonSkySettingsGUI();
+            CommonSkySettingsGUI();
         }
     }
 }

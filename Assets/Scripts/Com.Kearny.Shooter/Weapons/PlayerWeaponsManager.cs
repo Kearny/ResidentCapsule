@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Weapons
@@ -23,9 +22,6 @@ namespace Com.Kearny.Shooter.Weapons
 
         [Header("Misc")] [Tooltip("Speed at which the aiming animation is played")]
         public float aimingAnimationSpeed = 10f;
-
-        [Tooltip("Layer to set FPS weapon gameObjects to")]
-        public LayerMask FPSWeaponLayer;
 
         // PUBLIC
         public float BaseFov { get; private set; }

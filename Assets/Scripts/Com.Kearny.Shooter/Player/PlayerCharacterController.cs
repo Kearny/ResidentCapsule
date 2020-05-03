@@ -1,5 +1,4 @@
-﻿using System;
-using Com.Kearny.Shooter.GameMechanics;
+﻿using Com.Kearny.Shooter.GameMechanics;
 using Com.Kearny.Shooter.Weapons;
 using UnityEngine;
 
@@ -23,6 +22,12 @@ namespace Com.Kearny.Shooter.Player
         [Header("Movements")] [Tooltip("Speed at which player moves")]
         public float moveSpeed = 5;
 
+        [Tooltip("Force at which player jump")]
+        public float jumpForce = 10;
+
+        [Tooltip("Gravity force")]
+        public float gravity = 40f;
+
         // PUBLIC
 
         // PRIVATE
@@ -30,10 +35,10 @@ namespace Com.Kearny.Shooter.Player
         private readonly Quaternion _camCenter = new Quaternion(0, 0, 0, 1);
         private Transform _mainCameraTransform;
         private bool _isRunning;
-        private Vector3 _velocity;
+        private Vector3 _moveDirection;
         private CharacterController _characterController;
         private PlayerWeaponsManager _playerWeaponsManager;
-        
+
         public void SetFov(float fov)
         {
             mainCamera.fieldOfView = fov;
@@ -50,35 +55,56 @@ namespace Com.Kearny.Shooter.Player
             _playerWeaponsManager = GetComponent<PlayerWeaponsManager>();
         }
 
-        // Update is called once per frame
         private void Update()
         {
-            // Body movement input
-            var horizontalInput = Input.GetAxisRaw("Horizontal");
-            var verticalInput = Input.GetAxisRaw("Vertical");
-
-            var localTransform = transform;
-            var forwardMovement = localTransform.forward * verticalInput;
-            var rightMovement = localTransform.right * horizontalInput;
-            Move(Vector3.ClampMagnitude(forwardMovement + rightMovement, 1f) * moveSpeed);
-
             SetX();
             SetY();
 
-            // Sprinting
-            _isRunning = Input.GetKey(KeyCode.LeftShift) && !(verticalInput < 0f);
+            if (_characterController.isGrounded)
+            {
+                // We are grounded, so recalculate
+                // move direction directly from axes
 
-            // Change camera FOV base on running state
-            if (_isRunning)
-            {
-                SetFov(Mathf.Lerp(mainCamera.fieldOfView, _playerWeaponsManager.BaseFov * SprintFovModifier, Time.deltaTime * 5f));
+                var verticalInput = Input.GetAxisRaw("Vertical");
+                var horizontalInput = Input.GetAxis("Horizontal");
+                
+                var localTransform = transform;
+                var forwardMovement = localTransform.forward * verticalInput;
+                var rightMovement = localTransform.right * horizontalInput;
+                _moveDirection = Vector3.ClampMagnitude(forwardMovement + rightMovement, 1f);
+
+                if (Input.GetButton("Jump"))
+                {
+                    _moveDirection.y = jumpForce;
+                }
+
+                // Sprinting
+                _isRunning = Input.GetKey(KeyCode.LeftShift) && !(verticalInput < 0f);
+
+                // Change camera FOV base on running state
+                if (_isRunning)
+                {
+                    SetFov(Mathf.Lerp(mainCamera.fieldOfView, _playerWeaponsManager.BaseFov * SprintFovModifier,
+                        Time.deltaTime * 5f));
+
+                    _moveDirection *= moveSpeed * 2;
+                }
+                else
+                {
+                    SetFov(Mathf.Lerp(mainCamera.fieldOfView, _playerWeaponsManager.BaseFov, Time.deltaTime * 5f));
+                    _moveDirection *= moveSpeed;
+                }
             }
-            else
-            {
-                SetFov(Mathf.Lerp(mainCamera.fieldOfView, _playerWeaponsManager.BaseFov, Time.deltaTime * 5f));
-            }
+
+            // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
+            // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
+            // as an acceleration (ms^-2)
+            _moveDirection.y -= gravity * Time.deltaTime;
+
+            // Move the controller
+            _characterController.Move(_moveDirection * Time.deltaTime);
         }
-
+        
         private void SetY()
         {
             var yAngle = Input.GetAxis("Mouse Y") * ySensitivity * Time.deltaTime;
@@ -98,21 +124,6 @@ namespace Com.Kearny.Shooter.Player
             var delta = transform.localRotation * xRotation;
 
             Rotate(delta);
-        }
-
-        private void Move(Vector3 moveVelocity)
-        {
-            if (_characterController.isGrounded && _isRunning)
-            {
-                moveVelocity *= 2;
-            }
-
-            _velocity = _characterController.isGrounded ? moveVelocity : Vector3.zero;
-        }
-
-        private void FixedUpdate()
-        {
-            _characterController.SimpleMove(_velocity);
         }
 
         private void Rotate(Quaternion delta)

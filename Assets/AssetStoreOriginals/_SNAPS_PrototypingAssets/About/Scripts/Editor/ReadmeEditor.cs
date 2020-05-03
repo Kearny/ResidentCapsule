@@ -48,7 +48,7 @@ namespace AssetStoreOriginals._SNAPS_PrototypingAssets.About.Scripts.Editor
 			{
 				var readmeObject = AssetDatabase.LoadMainAssetAtPath(AssetDatabase.GUIDToAssetPath(ids[0]));
 			
-				Selection.objects = new UnityEngine.Object[]{readmeObject};
+				Selection.objects = new Object[]{readmeObject};
 			
 				return (Readme)readmeObject;
 			}

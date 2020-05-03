@@ -20,10 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="Adds a blinking light script.">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneSettings.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneSettings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFXDefaultResources.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFXDefaultResources.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BlinkingLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BlinkingLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_Tools/AssetSwapTool/Scripts/SwapTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_Tools/AssetSwapTool/Scripts/SwapTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BlinkingLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BlinkingLight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/High Definition RP/7.3.1/Procedural Sky/Editor/ProceduralSky/ProceduralSkyEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/High Definition RP/7.3.1/Procedural Sky/Editor/ProceduralSky/ProceduralSkyEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/SunManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/SunManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/SunManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/SunManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerCharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerCharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +53,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/Shell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/e5/f40a65a2/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/LivingEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/SunManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerCharacterController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/65/d69c0c20/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@7.3.1/Editor/Lighting/Reflection/HDBakedReflectionSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/BlinkingLight.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/BlinkingLight.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/GameUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C074160-DD1A-4D91-9B45-B6E4C27A3BAC/dc/3413a629/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/SunManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -62,6 +87,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/SunManager.cs" />
         <option value="$PROJECT_DIR$/Assets/BlinkingLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerCharacterController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" />
       </list>
     </option>
   </component>
@@ -114,6 +143,7 @@
       <workItem from="1587890349282" duration="3775000" />
       <workItem from="1588274262303" duration="1253000" />
       <workItem from="1588323211991" duration="2455000" />
+      <workItem from="1588495389581" duration="3756000" />
     </task>
     <task id="LOCAL-00001" summary="Adds a blinking light script.">
       <created>1588324166202</created>
@@ -218,10 +248,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587845845018" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1588325890045">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1588499137413">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1588325890045" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1588499137413" />
     <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1588324218171">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
