@@ -128,21 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2290361746180113090, guid: 70c3c324765014c2b859b6ab5b82ccce,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.451
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290361746180113090, guid: 70c3c324765014c2b859b6ab5b82ccce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.271
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290361746180113090, guid: 70c3c324765014c2b859b6ab5b82ccce,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.494
-      objectReference: {fileID: 0}
     - target: {fileID: 5338040443859239048, guid: 70c3c324765014c2b859b6ab5b82ccce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -203,15 +188,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6766979883553014870, guid: 70c3c324765014c2b859b6ab5b82ccce,
+    - target: {fileID: 9074405657373985608, guid: 70c3c324765014c2b859b6ab5b82ccce,
         type: 3}
-      propertyPath: jumpForce
-      value: 6
+      propertyPath: aimingBobAmount
+      value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 6766979883553014870, guid: 70c3c324765014c2b859b6ab5b82ccce,
+    - target: {fileID: 9074405657373985608, guid: 70c3c324765014c2b859b6ab5b82ccce,
         type: 3}
-      propertyPath: gravity
-      value: 50
+      propertyPath: defaultBobAmount
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70c3c324765014c2b859b6ab5b82ccce, type: 3}
