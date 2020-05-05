@@ -195,7 +195,7 @@ MonoBehaviour:
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
     supportVolumetrics: 1
-    increaseResolutionOfVolumetrics: 1
+    increaseResolutionOfVolumetrics: 0
     supportLightLayers: 0
     lightLayerName0: Light Layer default
     lightLayerName1: Light Layer 1
@@ -253,7 +253,7 @@ MonoBehaviour:
         useDynamicViewportRescale: 1
       areaLightShadowAtlas:
         shadowAtlasResolution: 4096
-        shadowAtlasDepthBits: 16
+        shadowAtlasDepthBits: 32
         useDynamicViewportRescale: 1
       shadowResolutionDirectional:
         m_Values: 00010000000200000004000000080000
@@ -283,12 +283,12 @@ MonoBehaviour:
       lutFormat: 48
       bufferFormat: 74
     dynamicResolutionSettings:
-      enabled: 0
+      enabled: 1
       maxPercentage: 100
-      minPercentage: 100
+      minPercentage: 50
       dynResType: 1
       upsampleFilter: 1
-      forceResolution: 0
+      forceResolution: 1
       forcedPercentage: 100
     lowresTransparentSettings:
       enabled: 1
@@ -312,7 +312,7 @@ MonoBehaviour:
       DoFHighQualityFiltering: 000101
       MotionBlurSampleCount: 04000000080000000c000000
       BloomRes: 040000000200000002000000
-      BloomHighQualityFiltering: 000101
+      BloomHighQualityFiltering: 000001
       ChromaticAberrationMaxSamples: 03000000060000000c000000
     lightSettings:
       useContactShadow:

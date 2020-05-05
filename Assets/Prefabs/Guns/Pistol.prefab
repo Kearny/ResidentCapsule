@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62491893578313831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.018, y: 0.085, z: 0.1861}
+  m_LocalPosition: {x: -0.0125, y: 0.085, z: 0.19}
   m_LocalScale: {x: 0.016181113, y: 0.058843758, z: 0.031956274}
   m_Children: []
   m_Father: {fileID: 3766599083309799877}
@@ -254,13 +254,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3448835088667187449}
-  m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: -0.211, z: 0.163}
+  m_LocalRotation: {x: -0.5691945, y: 0.0000000048777697, z: -0.000000008448545, w: 0.8222029}
+  m_LocalPosition: {x: 0, y: -0.174, z: 0.203}
   m_LocalScale: {x: 0.1598134, y: 0.1883, z: 0.3941048}
   m_Children: []
   m_Father: {fileID: 3766599083309799877}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -69.388, y: 0, z: 0}
 --- !u!33 &784543883220069876
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 5217351367820027845}
   - component: {fileID: 2341516566469470652}
   m_Layer: 0
-  m_Name: Barrel (1)
+  m_Name: Front Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5849389478632481558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.018, y: 0.085, z: 0.1861}
+  m_LocalPosition: {x: 0.0125, y: 0.085, z: 0.19}
   m_LocalScale: {x: 0.016181106, y: 0.05884375, z: 0.03195627}
   m_Children: []
   m_Father: {fileID: 3766599083309799877}
