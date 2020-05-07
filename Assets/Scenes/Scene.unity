@@ -772,12 +772,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670977316}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &694465060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3975734470566441827, guid: c07e726f6c08c4d8baa40513f170cf7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1933496896}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830802805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1165,10 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 312955687}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 694465060}
+  m_Entries: []
 --- !u!4 &961876429
 Transform:
   m_ObjectHideFlags: 19
@@ -2500,10 +2491,25 @@ PrefabInstance:
       propertyPath: m_BakedTexture
       value: 
       objectReference: {fileID: 8900000, guid: d9789f5a567bb4813be402914dc42c9e, type: 3}
+    - target: {fileID: 3975734470566441826, guid: c07e726f6c08c4d8baa40513f170cf7a,
+        type: 3}
+      propertyPath: m_ProbeSettings.proxySettings.useInfluenceVolumeAsProxyVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975734470566441826, guid: c07e726f6c08c4d8baa40513f170cf7a,
+        type: 3}
+      propertyPath: m_ProbeSettings.mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3975734470566441827, guid: c07e726f6c08c4d8baa40513f170cf7a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975734470566441829, guid: c07e726f6c08c4d8baa40513f170cf7a,
+        type: 3}
+      propertyPath: m_Mode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3975734470641093745, guid: c07e726f6c08c4d8baa40513f170cf7a,
         type: 3}
@@ -2603,17 +2609,17 @@ PrefabInstance:
     - target: {fileID: 3975734471152874393, guid: c07e726f6c08c4d8baa40513f170cf7a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7660445
+      value: -0.13052624
       objectReference: {fileID: 0}
     - target: {fileID: 3975734471152874393, guid: c07e726f6c08c4d8baa40513f170cf7a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -100
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 3975734471152874393, guid: c07e726f6c08c4d8baa40513f170cf7a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.64278764
+      value: 0.9914449
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07e726f6c08c4d8baa40513f170cf7a, type: 3}
