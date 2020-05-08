@@ -57,7 +57,7 @@ namespace Com.Kearny.Shooter.GameMechanics
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             
-            SceneManager.LoadScene("Scene");
+            SceneManager.LoadScene("mapinprogress");
         }
     }
 }
