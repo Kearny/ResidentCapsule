@@ -19,30 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="Adds a blinking light script.">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneSettings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneSettings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/VFXDefaultResources.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/VFXDefaultResources.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="Adds a jump action to the player">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_Tools/AssetSwapTool/Scripts/SwapTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetStoreOriginals/_SNAPS_Tools/AssetSwapTool/Scripts/SwapTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BlinkingLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BlinkingLight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/High Definition RP/7.3.1/Procedural Sky/Editor/ProceduralSky/ProceduralSkyEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/High Definition RP/7.3.1/Procedural Sky/Editor/ProceduralSky/ProceduralSkyEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/SunManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/SunManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/SunManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/SunManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerCharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Player/PlayerCharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +125,7 @@
       <workItem from="1587890349282" duration="3775000" />
       <workItem from="1588274262303" duration="1253000" />
       <workItem from="1588323211991" duration="2455000" />
-      <workItem from="1588495389581" duration="3756000" />
+      <workItem from="1588495389581" duration="4230000" />
     </task>
     <task id="LOCAL-00001" summary="Adds a blinking light script.">
       <created>1588324166202</created>
@@ -152,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588324166202</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adds a jump action to the player">
+      <created>1588499393096</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588499393096</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -173,7 +162,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Adds a blinking light script." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds a blinking light script." />
+    <MESSAGE value="Adds a jump action to the player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds a jump action to the player" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1921" height="390" key="GridCell.Tab.0.bottom" timestamp="1587892675280">
@@ -252,10 +242,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1588499137413" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1588324218171">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1588499402082">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1588324218171" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1588499402082" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1588324132608">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

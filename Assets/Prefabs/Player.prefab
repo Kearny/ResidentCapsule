@@ -417,8 +417,8 @@ MonoBehaviour:
   ySensitivity: 75
   maxAngle: 75
   moveSpeed: 5
-  jumpForce: 5
-  gravity: 40
+  jumpForce: 2.5
+  gravity: 50
 --- !u!114 &9074405657373985608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,9 +438,6 @@ MonoBehaviour:
   aimingWeaponPosition: {fileID: 2687910389619021243}
   downWeaponPosition: {fileID: 5604874975996047127}
   aimingAnimationSpeed: 5
-  FPSWeaponLayer:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!1 &7276774508399799123
 GameObject:
   m_ObjectHideFlags: 0
