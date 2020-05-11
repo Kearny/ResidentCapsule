@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf1098f9-f1c8-4c8a-ae13-0451531e4e71" name="Default Changelist" comment="Adds a jump action to the player">
+      <change afterPath="$PROJECT_DIR$/Assets/Objects.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ResidentCapsule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Scene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/Shell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Blender.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Weapons/PlayerWeaponsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/GameMechanics/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,6 +50,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/65/d69c0c20/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@7.3.1/Editor/Lighting/Reflection/HDBakedReflectionSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Enemy/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/BlinkingLight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C074160-DD1A-4D91-9B45-B6E4C27A3BAC/dc/3413a629/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Com.Kearny.Shooter/Light/SunManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,6 +128,7 @@
       <workItem from="1588274262303" duration="1253000" />
       <workItem from="1588323211991" duration="2455000" />
       <workItem from="1588495389581" duration="4230000" />
+      <workItem from="1589118511629" duration="208000" />
     </task>
     <task id="LOCAL-00001" summary="Adds a blinking light script.">
       <created>1588324166202</created>
@@ -141,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588499393096</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adds a Star Destroyer blender file">
+      <created>1589118522979</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589118522979</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -163,7 +173,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Adds a blinking light script." />
     <MESSAGE value="Adds a jump action to the player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds a jump action to the player" />
+    <MESSAGE value="Adds a Star Destroyer blender file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds a Star Destroyer blender file" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1921" height="390" key="GridCell.Tab.0.bottom" timestamp="1587892675280">
