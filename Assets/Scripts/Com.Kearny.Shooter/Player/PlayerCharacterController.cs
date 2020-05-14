@@ -25,18 +25,20 @@ namespace Com.Kearny.Shooter.Player
         [Tooltip("Force at which player jump")]
         public float jumpForce = 10;
 
-        [Tooltip("Gravity force")]
-        public float gravity = 40f;
+        [Tooltip("Gravity force")] public float gravity = 40f;
 
         // PUBLIC
+        public CharacterController CharacterController { get; private set; }
+
+        public Vector3 moveDirection;
 
         // PRIVATE
         private const float SprintFovModifier = 1.15f;
         private readonly Quaternion _camCenter = new Quaternion(0, 0, 0, 1);
+
+        private bool _isCursorLocked = true;
         private Transform _mainCameraTransform;
         private bool _isRunning;
-        private Vector3 _moveDirection;
-        private CharacterController _characterController;
         private PlayerWeaponsManager _playerWeaponsManager;
 
         public void SetFov(float fov)
@@ -51,31 +53,38 @@ namespace Com.Kearny.Shooter.Player
 
             _mainCameraTransform = mainCamera.transform;
 
-            _characterController = GetComponent<CharacterController>();
+            CharacterController = GetComponent<CharacterController>();
             _playerWeaponsManager = GetComponent<PlayerWeaponsManager>();
         }
 
         private void Update()
         {
+            UpdateCursorLock();
+
+            if (!_isCursorLocked)
+            {
+                return;
+            }
+
             SetX();
             SetY();
 
-            if (_characterController.isGrounded)
+            if (CharacterController.isGrounded)
             {
                 // We are grounded, so recalculate
                 // move direction directly from axes
 
                 var verticalInput = Input.GetAxisRaw("Vertical");
                 var horizontalInput = Input.GetAxis("Horizontal");
-                
+
                 var localTransform = transform;
                 var forwardMovement = localTransform.forward * verticalInput;
                 var rightMovement = localTransform.right * horizontalInput;
-                _moveDirection = Vector3.ClampMagnitude(forwardMovement + rightMovement, 1f);
+                moveDirection = Vector3.ClampMagnitude(forwardMovement + rightMovement, 1f);
 
                 if (Input.GetButton("Jump"))
                 {
-                    _moveDirection.y = jumpForce;
+                    moveDirection.y = jumpForce;
                 }
 
                 // Sprinting
@@ -87,24 +96,24 @@ namespace Com.Kearny.Shooter.Player
                     SetFov(Mathf.Lerp(mainCamera.fieldOfView, _playerWeaponsManager.BaseFov * SprintFovModifier,
                         Time.deltaTime * 5f));
 
-                    _moveDirection *= moveSpeed * 2;
+                    moveDirection *= moveSpeed * 2;
                 }
                 else
                 {
                     SetFov(Mathf.Lerp(mainCamera.fieldOfView, _playerWeaponsManager.BaseFov, Time.deltaTime * 5f));
-                    _moveDirection *= moveSpeed;
+                    moveDirection *= moveSpeed;
                 }
             }
 
             // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
             // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
             // as an acceleration (ms^-2)
-            _moveDirection.y -= gravity * Time.deltaTime;
+            moveDirection.y -= gravity * Time.deltaTime;
 
             // Move the controller
-            _characterController.Move(_moveDirection * Time.deltaTime);
+            CharacterController.Move(moveDirection * Time.deltaTime);
         }
-        
+
         private void SetY()
         {
             var yAngle = Input.GetAxis("Mouse Y") * ySensitivity * Time.deltaTime;
@@ -129,6 +138,30 @@ namespace Com.Kearny.Shooter.Player
         private void Rotate(Quaternion delta)
         {
             transform.localRotation = delta;
+        }
+
+        private void UpdateCursorLock()
+        {
+            if (_isCursorLocked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    _isCursorLocked = false;
+                }
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    _isCursorLocked = true;
+                }
+            }
         }
     }
 }

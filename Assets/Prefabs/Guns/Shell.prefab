@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4302235874681298606}
   - component: {fileID: 4302235874681298593}
   - component: {fileID: 8697976715852162441}
-  - component: {fileID: 8845867689691937251}
   - component: {fileID: 8657534718418682163}
   m_Layer: 0
   m_Name: Shell
@@ -51,11 +50,11 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4302235874681298592}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RenderingLayerMask: 1
@@ -97,19 +96,6 @@ MonoBehaviour:
   myRigidbody: {fileID: 8657534718418682163}
   forceMin: 200
   forceMax: 250
---- !u!65 &8845867689691937251
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4302235874681298592}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8657534718418682163
 Rigidbody:
   m_ObjectHideFlags: 0
