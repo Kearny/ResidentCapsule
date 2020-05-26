@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Com.Kearny.Shooter.Enemy
 {
-    [RequireComponent(typeof(Shooter.Enemy.Enemy))]
+    [RequireComponent(typeof(Enemy))]
     public class Spawner : MonoBehaviour
     {
         public Wave wave;
-        public Shooter.Enemy.Enemy enemy;
+        public Enemy enemy;
 
         private int _enemiesRemainingAlive = 0;
         private float _nextSpawnTime;
@@ -22,11 +22,12 @@ namespace Com.Kearny.Shooter.Enemy
 
         private void Update()
         {
-            if (_enemiesRemainingAlive >= wave.enemyCount) return;
+            if (_enemiesRemainingAlive < wave.enemyCount && Time.time > _nextSpawnTime)
+            {
+                _nextSpawnTime = Time.time + wave.timeBetweenSpawns;
 
-            _nextSpawnTime = Time.time + wave.timeBetweenSpawns;
-
-            SpawnEnemy();
+                SpawnEnemy();
+            }
         }
 
         private void SpawnEnemy()

@@ -39,7 +39,6 @@
             </e>
           </e>
         </e>
-        <e p="BlinkingLight.cs" t="Include" />
         <e p="Samples" t="Include">
           <e p="High Definition RP" t="Include">
             <e p="7.3.1" t="Include">
@@ -90,6 +89,9 @@
               <e p="GameUi.cs" t="Include" />
               <e p="IDamageable.cs" t="Include" />
               <e p="LivingEntity.cs" t="Include" />
+            </e>
+            <e p="Light" t="Include">
+              <e p="BlinkingLight.cs" t="Include" />
               <e p="SunManager.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
