@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4942556856287369379
+--- !u!1 &503053400166108280
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8262977143586390558}
-  - component: {fileID: 2999864377917527638}
-  - component: {fileID: 5906049483125246948}
-  - component: {fileID: 4597084453433988029}
-  - component: {fileID: 8473488504405499608}
-  - component: {fileID: 2589306427403220926}
+  - component: {fileID: 4567025129389980581}
+  - component: {fileID: 3032375510783059843}
+  - component: {fileID: 5488944032925458679}
+  - component: {fileID: 3015294448956861844}
+  - component: {fileID: -842259742748216353}
+  - component: {fileID: -6557955450108277533}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -21,13 +21,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8262977143586390558
+--- !u!4 &4567025129389980581
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942556856287369379}
+  m_GameObject: {fileID: 503053400166108280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,21 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2999864377917527638
+--- !u!33 &3032375510783059843
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942556856287369379}
+  m_GameObject: {fileID: 503053400166108280}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5906049483125246948
+--- !u!23 &5488944032925458679
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942556856287369379}
+  m_GameObject: {fileID: 503053400166108280}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,40 +82,39 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4597084453433988029
+--- !u!65 &3015294448956861844
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942556856287369379}
+  m_GameObject: {fileID: 503053400166108280}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8473488504405499608
+--- !u!114 &-842259742748216353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942556856287369379}
+  m_GameObject: {fileID: 503053400166108280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edcf597a82b814fe0bb1859801dc5f68, type: 3}
+  m_Script: {fileID: 11500000, guid: f0b493f1c78f44c7da17cf0ecdc9c1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerId: 0
---- !u!114 &2589306427403220926
+--- !u!114 &-6557955450108277533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942556856287369379}
+  m_GameObject: {fileID: 503053400166108280}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c79d771cedb4794bf100ce60df5f764, type: 3}
@@ -124,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabId: 1ed29506522cf4a00b60c8d86ec25c81
   DefaultClientInstantiationType: 2
-  RootPath: /Scripts/Generated
+  RootPath: Scripts/Com.Kearny.Shooter/Networking/Generated
   SnapshotDataPath: CubeSnapshotData.cs
   UpdateSystemPath: CubeGhostUpdateSystem.cs
   SerializerPath: CubeGhostSerializer.cs
@@ -140,6 +138,30 @@ MonoBehaviour:
     - name: PlayerId
       quantization: -1
       interpolate: 0
+    manualFieldList: 0
+    entityIndex: 0
+  - name: Unity.Rendering.PerInstanceCullingTag
+    interpolatedClient: 1
+    predictedClient: 1
+    server: 0
+    sendDataTo: 0
+    fields: []
+    manualFieldList: 0
+    entityIndex: 0
+  - name: Unity.Rendering.RenderBounds
+    interpolatedClient: 1
+    predictedClient: 1
+    server: 0
+    sendDataTo: 0
+    fields: []
+    manualFieldList: 0
+    entityIndex: 0
+  - name: Unity.Rendering.RenderMesh
+    interpolatedClient: 1
+    predictedClient: 1
+    server: 0
+    sendDataTo: 0
+    fields: []
     manualFieldList: 0
     entityIndex: 0
   - name: Unity.Transforms.LocalToWorld
