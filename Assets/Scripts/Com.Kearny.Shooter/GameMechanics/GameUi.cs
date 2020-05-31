@@ -1,10 +1,12 @@
 ﻿using System.Collections;
+using Unity.Burst;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Com.Kearny.Shooter.GameMechanics
 {
+    [BurstCompile]
     public class GameUi : MonoBehaviour
     {
         public Image fadePlane;
@@ -57,7 +59,7 @@ namespace Com.Kearny.Shooter.GameMechanics
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             
-            SceneManager.LoadScene("mapinprogress");
+            SceneManager.LoadScene("Scene");
         }
     }
 }

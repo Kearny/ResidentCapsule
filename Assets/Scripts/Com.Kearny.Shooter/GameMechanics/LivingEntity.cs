@@ -1,7 +1,9 @@
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.GameMechanics
 {
+    [BurstCompile]
     public class LivingEntity : MonoBehaviour, IDamageable
     {
         public float startingHealth;

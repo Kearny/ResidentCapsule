@@ -1,9 +1,11 @@
 ﻿using Com.Kearny.Shooter.GameMechanics;
 using Com.Kearny.Shooter.Weapons;
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Player
 {
+    [BurstCompile]
     [RequireComponent(typeof(CharacterController))]
     [RequireComponent(typeof(PlayerWeaponsManager))]
     public class PlayerCharacterController : LivingEntity
@@ -35,6 +37,8 @@ namespace Com.Kearny.Shooter.Player
         // PRIVATE
         private const float SprintFovModifier = 1.15f;
         private readonly Quaternion _camCenter = new Quaternion(0, 0, 0, 1);
+
+        private bool _isCursorLocked = true;
         private Transform _mainCameraTransform;
         private bool _isRunning;
         private PlayerWeaponsManager _playerWeaponsManager;
@@ -57,6 +61,13 @@ namespace Com.Kearny.Shooter.Player
 
         private void Update()
         {
+            UpdateCursorLock();
+
+            if (!_isCursorLocked)
+            {
+                return;
+            }
+
             SetX();
             SetY();
 
@@ -129,6 +140,30 @@ namespace Com.Kearny.Shooter.Player
         private void Rotate(Quaternion delta)
         {
             transform.localRotation = delta;
+        }
+
+        private void UpdateCursorLock()
+        {
+            if (_isCursorLocked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    _isCursorLocked = false;
+                }
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    _isCursorLocked = true;
+                }
+            }
         }
     }
 }

@@ -1,8 +1,10 @@
 using Com.Kearny.Shooter.GameMechanics;
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Enemy
 {
+    [BurstCompile]
     [RequireComponent(typeof(Enemy))]
     public class Spawner : MonoBehaviour
     {

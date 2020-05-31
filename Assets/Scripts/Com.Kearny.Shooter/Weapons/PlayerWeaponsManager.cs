@@ -1,7 +1,9 @@
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Weapons
 {
+    [BurstCompile]
     public class PlayerWeaponsManager : MonoBehaviour
     {
         // EDITOR
@@ -25,13 +27,13 @@ namespace Com.Kearny.Shooter.Weapons
 
         [Header("Weapon Bob")]
         [Tooltip("Frequency at which the weapon will move around in the screen when the player is in movement")]
-        public float bobFrequency = 10;
+        public float bobFrequency = 5;
 
         [Tooltip("How fast the weapon bob is applied, the bigger value the fastest")]
         public float bobSharpness = 10f;
 
         [Tooltip("Distance the weapon bobs when not aiming")]
-        public float defaultBobAmount = 0.05f;
+        public float defaultBobAmount = 0.2f;
 
         [Tooltip("Distance the weapon bobs when aiming")]
         public float aimingBobAmount = 0.02f;
@@ -41,7 +43,7 @@ namespace Com.Kearny.Shooter.Weapons
         public float recoilSharpness = 50f;
 
         [Tooltip("Maximum distance the recoil can affect the weapon")]
-        public float maxRecoilDistance = 0.5f;
+        public float maxRecoilDistance = 0.3f;
 
         [Tooltip("How fast the weapon goes back to it's original position after the recoil is finished")]
         public float recoilRestitutionSharpness = 10f;

@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using Com.Kearny.Shooter.GameMechanics;
+using Unity.Burst;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Com.Kearny.Shooter.Enemy
 {
+    [BurstCompile]
     [RequireComponent(typeof(NavMeshAgent))]
     public class Enemy : LivingEntity
     {
         private enum State
         {
             Idle,
-
             Chasing,
-
             Attacking
         };
 
@@ -41,9 +41,9 @@ namespace Com.Kearny.Shooter.Enemy
             _deathEffectParticleSystem = deathEffect.GetComponent<ParticleSystem>();
 
             _pathFinder = GetComponent<NavMeshAgent>();
-            
+
             if (!GameObject.FindGameObjectWithTag("Player")) return;
-            
+
             _currentState = State.Chasing;
             _hasTarget = true;
 
@@ -63,7 +63,7 @@ namespace Com.Kearny.Shooter.Enemy
             if (!(Time.time > _nextAttackTime)) return;
 
             var squareDistanceToTarget = (_target.position - transform.position).sqrMagnitude;
-            
+
             // If can Attack
             if (squareDistanceToTarget < Mathf.Pow(
                 AttackDistanceThreshold + _myCollisionRadius + _targetCollisionRadius,
@@ -106,7 +106,7 @@ namespace Com.Kearny.Shooter.Enemy
             var attackPosition = targetPosition - directionToTarget;
 
             const float attackSpeed = 3;
-            float percent = 0;
+            float percent = 0; 
 
             var hasAppliedDamage = false;
 
