@@ -45,6 +45,11 @@ namespace Com.Kearny.Shooter.Weapons
             var ray = new Ray(localTransform.position, localTransform.forward);
             if (Physics.Raycast(ray, out var hit, moveDistance + SkinWidth, collisionMask, QueryTriggerInteraction.Collide))
             {
+                if (hit.collider.gameObject.CompareTag  ("Post processing"))
+                {
+                    return;
+                }
+
                 OnHitObject(hit.collider, hit.point);
             }
         }
