@@ -1,7 +1,9 @@
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Weapons
 {
+    [BurstCompile]
     public abstract class Gun : MonoBehaviour
     {
         protected abstract FireMode FireMode { get; set; }

@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Unity.Burst;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Com.Kearny.Shooter.GameMechanics
 {
+    [BurstCompile]
     public class GameManager : MonoBehaviour
     {
         private LinkedList<GameObject> _shuffledSpawners;

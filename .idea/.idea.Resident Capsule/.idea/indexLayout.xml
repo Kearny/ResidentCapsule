@@ -21,20 +21,21 @@
       <Path>Library/PackageCache/com.unity.probuilder@4.3.0-preview.7</Path>
       <Path>Library/PackageCache/com.unity.properties.ui@1.1.1-preview</Path>
       <Path>Library/PackageCache/com.unity.properties@1.2.0-preview</Path>
-      <Path>Library/PackageCache/com.unity.render-pipelines.core@8.1.0</Path>
-      <Path>Library/PackageCache/com.unity.render-pipelines.high-definition-config@8.1.0</Path>
-      <Path>Library/PackageCache/com.unity.render-pipelines.high-definition@8.1.0</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.core@7.3.1</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.high-definition-config@7.3.1</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.high-definition@7.3.1</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.universal@7.3.1</Path>
       <Path>Library/PackageCache/com.unity.rendering.hybrid@0.5.1-preview.18</Path>
       <Path>Library/PackageCache/com.unity.scriptablebuildpipeline@1.6.4-preview</Path>
       <Path>Library/PackageCache/com.unity.searcher@4.0.9</Path>
       <Path>Library/PackageCache/com.unity.serialization@1.2.0-preview</Path>
-      <Path>Library/PackageCache/com.unity.shadergraph@8.1.0</Path>
+      <Path>Library/PackageCache/com.unity.shadergraph@7.3.1</Path>
       <Path>Library/PackageCache/com.unity.test-framework.performance@2.0.8-preview</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.13</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.14</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@3.0.0-preview.1</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.2.14</Path>
-      <Path>Library/PackageCache/com.unity.visualeffectgraph@8.1.0</Path>
+      <Path>Library/PackageCache/com.unity.visualeffectgraph@7.3.1</Path>
       <Path>Library/PackageCache/nuget.mono-cecil@0.1.5-preview</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
@@ -45,7 +46,6 @@
       <Path>Build</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>

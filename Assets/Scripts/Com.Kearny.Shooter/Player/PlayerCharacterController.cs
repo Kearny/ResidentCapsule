@@ -1,9 +1,11 @@
 ﻿using Com.Kearny.Shooter.GameMechanics;
 using Com.Kearny.Shooter.Weapons;
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Player
 {
+    [BurstCompile]
     [RequireComponent(typeof(CharacterController))]
     [RequireComponent(typeof(PlayerWeaponsManager))]
     public class PlayerCharacterController : LivingEntity

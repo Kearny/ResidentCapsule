@@ -1,7 +1,9 @@
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.Weapons
 {
+    [BurstCompile]
     public class PlayerWeaponsManager : MonoBehaviour
     {
         // EDITOR

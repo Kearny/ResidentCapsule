@@ -10,9 +10,7 @@ namespace Com.Kearny.Shooter.Weapons
         private float _speed;
 
         private const float Damage = 1;
-
         private const float Lifetime = 3;
-
         private const float SkinWidth = .1f;
 
         private void Start()

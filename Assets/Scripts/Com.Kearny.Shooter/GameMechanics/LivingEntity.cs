@@ -1,7 +1,9 @@
+using Unity.Burst;
 using UnityEngine;
 
 namespace Com.Kearny.Shooter.GameMechanics
 {
+    [BurstCompile]
     public class LivingEntity : MonoBehaviour, IDamageable
     {
         public float startingHealth;
@@ -22,7 +24,10 @@ namespace Com.Kearny.Shooter.GameMechanics
 
         public void TakeDamage(float damage)
         {
+            Debug.Log("I'm " + name + " and I have " + health + " HP. I'm taking " + damage);
             health -= damage;
+
+            Debug.Log("I'm " + name + " and I now have " + health + " HP.");
 
             if (health <= 0 && !isDead)
             {

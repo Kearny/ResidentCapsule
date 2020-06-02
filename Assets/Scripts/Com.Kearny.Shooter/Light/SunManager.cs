@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Com.Kearny.Shooter.GameMechanics
+namespace Com.Kearny.Shooter.Light
 {
     public class SunManager : MonoBehaviour
     {

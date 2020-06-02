@@ -113,10 +113,11 @@ MonoBehaviour:
   muzzle: {fileID: 6638636198293400217}
   projectile: {fileID: 4266817499533407773, guid: d5536493cfafc4ca5b4b2772c0cae48b,
     type: 3}
-  msBetweenShots: 100
-  muzzleVelocity: 200
   shell: {fileID: 4302235874681298607, guid: 8db21555616a545869688eeab4518395, type: 3}
   shellEjection: {fileID: 5859844235951636808}
+  msBetweenShots: 100
+  muzzleVelocity: 200
+  recoilForce: 1
 --- !u!114 &7751018533616864465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: a84a1f7ab4bb4468c91729868c200ad1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -343,7 +344,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: a84a1f7ab4bb4468c91729868c200ad1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
